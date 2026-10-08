@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="교통망 이론·복잡계 네트워크·교통계획 분야 해외 포닥 PI 후보 64곳 — 연구실 링크, 이메일, 대표논문, 연구실 구성, 공개 모집 현황.">
+<meta name="color-scheme" content="light dark">
+<title>교통망 포닥 후보 지도</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@300;400&display=swap">
+<style>
+@font-face{font-family:"KoPubWorld Batang Light";font-style:normal;font-weight:300;font-display:swap;src:url("fonts/KoPubWorldBatangLight.woff2") format("woff2")}
+@font-face{font-family:"KoPubWorld Dotum";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/KoPubWorldDotumMedium.woff2") format("woff2")}
+@font-face{font-family:"KoPubWorld Dotum";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/KoPubWorldDotumBold.woff2") format("woff2")}
+
+:root{
+  --paper:#eef0ea; --surface:#ffffff; --surface-2:#f7f8f4;
+  --line:#d6dacf; --line-strong:#b3baa9;
+  --ink:#1a211c; --ink-2:#4e5852; --ink-3:#78827b;
+  --accent:#1d5c4e; --accent-soft:#dde9e3;
+  --open:#1b5c4d; --open-bg:#dbe9e2;
+  --standing:#2b5a82; --standing-bg:#dce7f1;
+  --past:#8a4a22; --past-bg:#f0e3d7;
+  --unknown:#6d776f; --unknown-bg:#e4e7e0;
+  --warn:#8c5a10;
+  --display:"KoPubWorld Dotum","Noto Sans KR",system-ui,sans-serif;
+  --body:"KoPubWorld Batang Light","Noto Serif KR",ui-serif,Georgia,serif;
+  --caret:18px; --chk:34px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#131714; --surface:#1b211c; --surface-2:#222a23;
+    --line:#2f3831; --line-strong:#47534a;
+    --ink:#e8ece6; --ink-2:#a8b1a8; --ink-3:#7f897f;
+    --accent:#62c0a7; --accent-soft:#1f3a33;
+    --open:#6fc9af; --open-bg:#1c382f;
+    --standing:#85b4de; --standing-bg:#1d2f3f;
+    --past:#d79a5f; --past-bg:#3a2b1d;
+    --unknown:#879187; --unknown-bg:#272e28;
+    --warn:#d9a84e;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131714; --surface:#1b211c; --surface-2:#222a23;
+  --line:#2f3831; --line-strong:#47534a;
+  --ink:#e8ece6; --ink-2:#a8b1a8; --ink-3:#7f897f;
+  --accent:#62c0a7; --accent-soft:#1f3a33;
+  --open:#6fc9af; --open-bg:#1c382f;
+  --standing:#85b4de; --standing-bg:#1d2f3f;
+  --past:#d79a5f; --past-bg:#3a2b1d;
+  --unknown:#879187; --unknown-bg:#272e28;
+  --warn:#d9a84e;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--body); font-size:15.5px; line-height:1.72; -webkit-font-smoothing:antialiased}
+.wrap{max-width:1150px; margin:0 auto; padding-inline:18px; padding-block:0 64px}
+a{color:var(--accent); text-decoration:none; border-bottom:1px solid var(--line-strong)}
+a:hover{border-bottom-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+
+header.mast{padding-block:40px 24px; border-bottom:2px solid var(--line-strong)}
+.masttop{display:flex; flex-wrap:wrap; gap:12px 18px; align-items:flex-start; justify-content:space-between; margin-bottom:14px}
+.eyebrow{font-family:var(--display); font-weight:500; font-size:11.5px; letter-spacing:.14em; color:var(--ink-3); margin:0; padding-top:5px}
+.themeset{display:flex; gap:0; border:1px solid var(--line-strong); border-radius:100px; overflow:hidden; flex:0 0 auto}
+.tbtn{font-family:var(--display); font-weight:400; font-size:11.5px; padding:5px 12px; border:0; border-right:1px solid var(--line); background:var(--surface); color:var(--ink-3); cursor:pointer}
+.tbtn:last-child{border-right:0}
+.tbtn:hover{color:var(--ink)}
+.tbtn[aria-pressed="true"]{background:var(--accent); color:var(--paper); font-weight:500}
+h1{font-family:var(--display); font-weight:700; font-size:clamp(27px,5vw,42px); line-height:1.2; margin:0 0 14px; text-wrap:balance; letter-spacing:-.01em}
+.lede{margin:0; max-width:64ch; color:var(--ink-2); font-size:15.5px}
+
+.stats{display:flex; flex-wrap:wrap; margin-block:26px 0; border:1px solid var(--line); background:var(--surface); border-radius:3px; overflow:hidden}
+.stat{flex:1 1 140px; padding:14px 16px; border-right:1px solid var(--line)}
+.stat:last-child{border-right:none}
+.stat b{display:block; font-family:var(--display); font-weight:700; font-size:24px; line-height:1.1; font-variant-numeric:tabular-nums; color:var(--ink)}
+.stat span{display:block; font-family:var(--display); font-weight:400; font-size:11.5px; color:var(--ink-3); margin-top:5px}
+.stat.hi b{color:var(--open)}
+
+section{margin-top:42px}
+h2{font-family:var(--display); font-weight:700; font-size:20px; margin:0 0 6px; letter-spacing:-.005em}
+h3{font-family:var(--display); font-weight:500; font-size:14px; margin:0}
+.sub{margin:0 0 18px; color:var(--ink-3); font-size:13.5px; max-width:68ch}
+
+.notice{background:var(--surface); border:1px solid var(--line-strong); border-left:3px solid var(--warn); border-radius:3px; padding:16px 18px; margin-top:22px}
+.notice.key{border-left-color:var(--accent)}
+.notice .nh{font-family:var(--display); font-weight:700; font-size:14px; margin-bottom:7px; color:var(--ink)}
+.notice p{margin:0 0 8px; font-size:14px; color:var(--ink-2)}
+.notice p:last-child{margin-bottom:0}
+.notice strong{color:var(--ink); font-weight:400; border-bottom:1px solid var(--line-strong)}
+.notice ul{margin:6px 0 0; padding-left:18px; font-size:13.5px; color:var(--ink-2)}
+.notice li{margin-bottom:5px}
+
+.queue{display:grid; gap:10px; counter-reset:q}
+.q{display:flex; gap:14px; align-items:flex-start; background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:3px; padding:13px 16px}
+.q .n{counter-increment:q; font-family:var(--display); font-weight:700; font-size:12px; color:var(--accent); padding-top:4px; min-width:18px}
+.q .n::before{content:counter(q,decimal-leading-zero)}
+.q .qbody{min-width:0}
+.q .who{font-family:var(--display); font-weight:700; font-size:14.5px}
+.q .who em{font-style:normal; font-weight:400; color:var(--ink-3); font-size:13px}
+.q .why{font-size:14px; color:var(--ink-2); margin-top:4px}
+.q .act{font-family:var(--display); font-weight:500; font-size:12px; color:var(--accent); margin-top:7px}
+
+.toolbar{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--paper); padding-block:12px; border-bottom:1px solid var(--line)}
+.filters{display:flex; flex-wrap:wrap; gap:14px 22px; align-items:flex-end}
+.fgroup{display:flex; flex-direction:column; gap:6px}
+.flabel{font-family:var(--display); font-weight:500; font-size:10.5px; letter-spacing:.12em; color:var(--ink-3)}
+.chips{display:flex; flex-wrap:wrap; gap:5px}
+.chip{font-family:var(--display); font-weight:400; font-size:12.5px; padding:5px 11px; border:1px solid var(--line-strong); background:var(--surface); color:var(--ink-2); border-radius:100px; cursor:pointer}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--paper); font-weight:500}
+input[type="search"]{font-family:var(--body); font-size:13.5px; padding:7px 11px; border:1px solid var(--line-strong); background:var(--surface); color:var(--ink); border-radius:3px; min-width:190px; width:100%}
+.fgroup.grow{flex:1 1 190px; min-width:0}
+
+/* 표 — 헤더와 본문이 같은 그리드 정의를 공유한다.
+   이전 버전은 flex-basis 퍼센트 합이 104%여서 마지막 열이 행 밖으로 61px 삐져나왔다.
+   fr 트랙 + minmax(0,…) 으로 바꿔 합이 항상 정확히 맞고 긴 문자열에도 넘치지 않는다. */
+.gridrow{display:grid; align-items:start;
+  grid-template-columns:var(--caret) minmax(0,19fr) minmax(0,22fr) minmax(0,13fr) minmax(0,12fr) minmax(0,8fr) minmax(0,23fr)}
+.outerrow{display:grid; align-items:start; grid-template-columns:var(--chk) minmax(0,1fr)}
+
+.thead{border-bottom:1.5px solid var(--line-strong); background:var(--paper)}
+.thead .c{font-family:var(--display); font-weight:500; font-size:10.5px; letter-spacing:.1em; color:var(--ink-3); padding:9px 10px; cursor:pointer; user-select:none}
+.thead .c:hover{color:var(--accent)}
+.thead .c .arrow{opacity:.45; font-size:9px}
+
+.rec{border-bottom:1px solid var(--line); background:var(--surface)}
+.rec:nth-of-type(even){background:var(--surface-2)}
+.rec.open{background:var(--accent-soft)}
+.rec.marked{box-shadow:inset 3px 0 0 var(--accent)}
+.rhead{width:100%; text-align:left; border:0; background:none; cursor:pointer; padding:0; font:inherit; color:inherit}
+.rhead:hover{background:var(--accent-soft)}
+.caret{font-family:var(--display); color:var(--ink-3); font-size:11px; padding-top:13px; text-align:center}
+.rec.open .caret{color:var(--accent)}
+.c{padding:11px 10px; min-width:0; font-size:13.5px; overflow-wrap:anywhere}
+
+/* 관심 체크 */
+.chkcell{display:flex; align-items:flex-start; justify-content:center; padding:12px 0 0}
+.chk{display:inline-flex; width:17px; height:17px; cursor:pointer; margin:0; accent-color:var(--accent)}
+.chk:disabled{cursor:not-allowed; opacity:.35}
+.savenote{font-family:var(--display); font-weight:400; font-size:11.5px; color:var(--ink-3); padding:8px 2px 0}
+.savenote b{color:var(--warn); font-weight:500}
+.nm{font-family:var(--display); font-weight:700; font-size:14px; display:block}
+.sub2{font-size:12px; color:var(--ink-3); display:block; margin-top:3px; line-height:1.55}
+.c-rank,.c-pd{color:var(--ink-2)}
+.c-pd{font-variant-numeric:tabular-nums}
+.cat{display:inline-block; font-family:var(--display); font-weight:500; font-size:10.5px; padding:3px 7px; border-radius:2px; background:var(--surface-2); color:var(--ink-2); border:1px solid var(--line); margin-bottom:3px}
+.rec.open .cat{background:var(--surface)}
+.cat.urb{background:transparent; color:var(--accent); border-color:var(--accent); display:block; width:fit-content}
+.tag{display:inline-block; font-family:var(--display); font-weight:500; font-size:10.5px; padding:3px 7px; border-radius:2px; white-space:nowrap}
+.tag.open{background:var(--open-bg); color:var(--open)}
+.tag.standing{background:var(--standing-bg); color:var(--standing)}
+.tag.past{background:var(--past-bg); color:var(--past)}
+.tag.unknown{background:var(--unknown-bg); color:var(--unknown)}
+.sigtext{display:block; font-size:12px; color:var(--ink-2); margin-top:5px; line-height:1.55}
+.vmark{font-family:var(--display); font-weight:400; font-size:10px; color:var(--warn); border:1px solid var(--line-strong); padding:1px 5px; border-radius:2px; margin-left:6px; white-space:nowrap}
+.labl{display:none}
+.empty{padding:36px 10px; color:var(--ink-3); font-size:14px; text-align:center}
+
+.detail{padding:4px 12px 20px calc(var(--chk) + var(--caret) + 4px); border-top:1px dashed var(--line-strong)}
+.links{display:flex; flex-wrap:wrap; gap:7px; margin-top:14px}
+.lnk{font-family:var(--display); font-weight:500; font-size:11.5px; padding:5px 11px; border:1px solid var(--accent); color:var(--accent); border-radius:100px; background:transparent}
+.lnk:hover{background:var(--accent); color:var(--paper); border-bottom-color:var(--accent)}
+.lnk.ghost{border-color:var(--line-strong); color:var(--ink-3)}
+.lnk.ghost:hover{background:var(--line); color:var(--ink); border-bottom-color:var(--line)}
+.dgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:16px 26px; margin-top:16px}
+.dblock h3{color:var(--accent); font-size:11px; letter-spacing:.1em; margin-bottom:7px}
+.dblock p{margin:0 0 6px; font-size:13.5px; color:var(--ink-2)}
+.dblock p:last-child{margin-bottom:0}
+.addr{font-family:var(--display); font-weight:400; font-size:12.5px; color:var(--ink-2); line-height:1.6}
+.mail{font-family:var(--display); font-weight:500; font-size:12.5px; color:var(--ink); word-break:break-all}
+.paper{margin:0 0 9px; font-size:13.5px; color:var(--ink-2)}
+.paper:last-child{margin-bottom:0}
+.paper .pt{color:var(--ink)}
+.paper .pv{font-family:var(--display); font-weight:400; font-size:11.5px; color:var(--ink-3); display:block; margin-top:2px; font-variant-numeric:tabular-nums}
+.roster{font-family:var(--display); font-weight:500; font-size:13px; color:var(--ink); font-variant-numeric:tabular-nums}
+.na{color:var(--ink-3)}
+.fitbox{border-left:2px solid var(--accent); padding-left:11px}
+
+.notes{display:grid; grid-template-columns:repeat(auto-fit,minmax(265px,1fr)); gap:14px}
+.note{background:var(--surface); border:1px solid var(--line); border-radius:3px; padding:16px 17px}
+.note h3{margin:0 0 9px; display:flex; gap:8px; align-items:baseline; font-weight:700}
+.note h3 .k{font-weight:500; font-size:10.5px; color:var(--accent); letter-spacing:.08em}
+.note p{margin:0 0 9px; font-size:13.5px; color:var(--ink-2)}
+.note p:last-child{margin-bottom:0}
+.note strong{color:var(--ink); font-weight:400; border-bottom:1px solid var(--line-strong)}
+.note ul{margin:0; padding-left:17px; font-size:13.5px; color:var(--ink-2)}
+.note li{margin-bottom:5px}
+
+.legend{margin-top:40px; border-top:1px solid var(--line); padding-top:18px; font-size:13px; color:var(--ink-3)}
+.legend .lh{font-family:var(--display); font-weight:700; color:var(--ink); font-size:14px}
+.legend dl{display:grid; grid-template-columns:auto 1fr; gap:8px 14px; margin:12px 0 0; align-items:baseline}
+.legend dt,.legend dd{margin:0}
+.caveat{margin-top:20px; padding:14px 16px; border:1px solid var(--line-strong); background:var(--surface); border-radius:3px; font-size:13.5px; color:var(--ink-2)}
+.caveat b{font-family:var(--display); font-weight:700; color:var(--ink)}
+.src{margin-top:18px; font-size:12.5px; color:var(--ink-3); line-height:1.75}
+.src b{font-family:var(--display); font-weight:500; color:var(--ink-2)}
+
+@media (max-width:900px){
+  .thead{display:none}
+  .gridrow{grid-template-columns:minmax(0,1fr)}
+  .outerrow{grid-template-columns:30px minmax(0,1fr)}
+  .rhead{padding:12px 2px 10px}
+  .rhead .c{padding:3px 10px; display:flex; gap:10px; align-items:baseline; width:100%}
+  .labl{display:block; font-family:var(--display); font-weight:500; font-size:10px; letter-spacing:.08em; color:var(--ink-3); flex:0 0 66px; padding-top:4px}
+  .rhead .c-name .labl{display:none}
+  .c-name > div{min-width:0}
+  .caret{display:none}
+  .chkcell{padding-top:14px}
+  .detail{padding-left:12px}
+  .stat{flex:1 1 44%}
+}
+</style>
+
+<script>
+/* 저장된 테마 선택을 첫 페인트 전에 적용한다. "system"(기본)이면 아무것도 쓰지 않아
+   아티팩트에서는 앱 테마를, 정적 호스팅에서는 OS 설정을 그대로 따른다. */
+(function(){try{var m=localStorage.getItem("postdoc-map.theme");
+if(m==="light"||m==="dark")document.documentElement.setAttribute("data-theme",m);}catch(e){}})();
+</script>
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="mast">
+  <div class="masttop">
+    <p class="eyebrow">POSTDOC SCOUTING · 교통망 이론 · 복잡계 · 교통계획 · 2026.10.02 조사</p>
+    <div class="themeset" role="group" aria-label="테마">
+      <button type="button" class="tbtn" data-theme-set="system">시스템</button>
+      <button type="button" class="tbtn" data-theme-set="light">라이트</button>
+      <button type="button" class="tbtn" data-theme-set="dark">다크</button>
+    </div>
+  </div>
+  <h1>교통망 포닥 후보 지도</h1>
+  <p class="lede">네가 예시로 준 네 분(UCLA 김영서, 도쿄대 Oyama, 스토니브룩 Zhichen Liu, NYU Yabe)을 기준점으로 삼은 해외 PI 후보 풀. 각 행을 누르면 <strong>홈페이지·Scholar 링크, 이메일, 주소, 대표논문, 연구실 구성</strong>이 펼쳐져.</p>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="notice key">
+  <div class="nh">미국 국적 + 일본어 — 어디서 실제로 돈이 되는지</div>
+  <p><strong>미국 국적의 가장 큰 효과는 펠로십이 아니라 채용 마찰 제거야.</strong> 미국 교수 입장에서 국제 포닥은 J-1/H-1B 처리 비용·지연·불확실성이 붙어. 국적자는 그게 0이야. 콜드메일 첫 문단에 "U.S. citizen — no visa sponsorship required"를 넣는 것만으로 회신율이 올라가고, 특히 <strong>공고에 시작일이 박힌 자리</strong>에서는 결정적이야. 표의 미국 PI 전원에 적용돼.</p>
+  <p>여기에 <strong>국립연구소가 추가로 열려</strong>. LBNL Sustainable Transportation Initiative는 보안 클리어런스가 없어서 국적 요건이 느슨한 편이지만, Sandia·LANL·LLNL 같은 국방계는 사실상 국적자 전용이고 Sandia의 Truman/Hruby 펠로십은 미국 국적을 명시적으로 요구해. 교통망 복원력·인프라 쪽이면 실제 지원 가능한 트랙이야.</p>
+  <p><strong>주의 — Eisenhower(DDETFP)는 포닥에 해당 없어.</strong> 석·박사 재학생 대상이고, 게다가 비국적자도 I-20/영주권 카드로 지원 가능해서 국적 이점도 없어. 교통 쪽에서 자주 잘못 추천되는 항목이라 확인해뒀어.</p>
+  <p><strong>일본어는 JSPS와 결합할 때 가장 강해.</strong> JSPS International Fellowships는 미국 시민·영주권자 지원 가능이고 두 트랙이 있어 — <strong>Short-term(PE)</strong>은 미국·캐나다·EU·영국·스위스·노르웨이 시민 <em>전용</em> 1~12개월, <strong>Standard</strong>는 박사 취득 6년 내 12~24개월. 즉 네 국적이 Short-term 트랙의 자격 요건 그 자체야. 호스트 요건은 <strong>상근 연구자 + 조교수·연구조교 제외</strong>라, 도쿄대 Oyama(부교수)·Iryo(정교수)·Hato(정교수)·Fukuda(정교수), 교토대 Schmöcker(부교수)는 전부 호스트 자격이 돼. 단 미 국방부 소속 기관 재직자는 제외.</p>
+  <p>일본어의 실질 가치는 <strong>랩 내부 운영 언어</strong>야. 도쿄대 BinN 계열은 세미나·일상 소통이 일본어이고 JSCE 저널·학회 네트워크도 일본어권이라, 일본어 가능자는 외국인 포닥 중 예외적 위치에 서. Schmöcker 랩은 반대로 영어로 운영돼서 일본어가 없어도 되지만 있으면 교토대 내부 네트워크까지 열려.</p>
+  <p><strong>결론 — 유럽의 상대적 매력은 내려가.</strong> MSCA는 국적 무관이고 공용어가 영어라 네 두 강점이 거의 작동하지 않아. 자리 자체가 좋으면 가되, <strong>같은 조건이면 일본(JSPS) &gt; 미국(마찰 0 + 국립연구소) &gt; 유럽</strong> 순으로 기대값이 달라져.</p>
+</div>
+
+<div class="notice">
+  <div class="nh">교통류는 분리해서 제외했어 · 인종 항목은 다르게 처리했어</div>
+  <p><strong>교통류 ≠ 교통망 이론</strong>이라는 네 지적이 맞아서 분류를 네 개로 쪼개고 교통류 전업 PI는 뺐어. 빠진 사람 — 되돌리고 싶을 수 있으니 적어둘게. 특히 첫 번째는 원래 내 2순위 추천이었어: <strong>Nikolas Geroliminis</strong>(EPFL LUTS, 포닥 1자리 모집 중), Monica Menendez(NYUAD), Mohsen Ramezani(Sydney), Anastasios Kouvelas(ETH), Saif Jabari(NYUAD), Serge Hoogendoorn·Hans van Lint(TU Delft), Cathy Wu(MIT), Jiaqi Ma(UCLA).</p>
+  <p><strong>구성원 인종은 넣지 않았어.</strong> 이름·사진으로 추정하는 수밖에 없는데 Chen·Kim 같은 성은 국적도 성장 배경도 말해주지 않아서, 그런 표는 그럴듯해 보이면서 네 판단을 잘못된 쪽으로 끌고 가. 대신 네가 직접 준 대안 — <strong>구성원의 이전 소속 기관과 국가</strong> — 로 채웠고, 이 랩이 국제 연구자를 받는지·비자를 처리해봤는지·영어로 돌아가는지에 더 정확하게 답해.</p>
+</div>
+
+<section>
+  <h2>지금 순서대로 연락할 곳</h2>
+  <p class="sub">네 강점(미국 국적 + 일본어)을 반영해 재정렬했어.</p>
+  <div class="queue">
+
+    <div class="q"><div class="n"></div><div class="qbody">
+      <div class="who">도쿄대 교통망 이론 클러스터 <em>— Oyama · Iryo · Hato · Fukuda</em></div>
+      <div class="why">네 조건에서 기대값이 가장 높은 조합이야. <strong>Iryo 교수가 2025년 4월 도호쿠대 → 도쿄대로 이동</strong>해서(고베대 2013–20 → 도호쿠대 2020–25 → 도쿄대 2025–) 동적 교통망 균형 유일성 이론의 핵심 인물이 Oyama·Hato의 BinN 계열에 합류했어. 지금 도쿄대는 <strong>순수 교통망 이론 밀도가 세계 최상위</strong>이고, 네 명 전원이 JSPS 호스트 자격(부교수 이상)을 충족해. <strong>일본어 + 미국 국적 → JSPS Short-term(PE) 트랙 자격 그 자체</strong>이고, 자금·비자·언어가 한 번에 해결돼. Iryo는 이동 직후라 랩 재구성 시점이라는 점도 타이밍이 좋아.</div>
+      <div class="act">→ Oyama JOIN-US 경유 + Iryo 별도 타진. JSPS 일정 역산해서 지금 시작</div>
+    </div></div>
+
+    <div class="q"><div class="n"></div><div class="qbody">
+      <div class="who">Lijun Sun <em>— McGill, Montreal · 데이터·ML</em></div>
+      <div class="why">포닥 <strong>2자리 공개 모집 중</strong>이고 표 안에서 가장 확실한 자리. 포닥이 이미 3명(2024.8 / 2025.1 / 2026.3 순차 영입)이라 흐름이 예측 가능하고, 그 중 <strong>2명이 CSC(중국국가유학기금) 자금</strong>으로 와 있어 — 외부 펠로십을 들고 오는 지원자를 적극 받는다는 증거야. 캐나다라 미국 국적의 비자 이점은 안 먹히지만, NSERC PDF를 끼면 같은 논리가 작동해.</div>
+      <div class="act">→ CV + 논문 리스트 + 추천인. NSERC PDF 동반 제안</div>
+    </div></div>
+
+    <div class="q"><div class="n"></div><div class="qbody">
+      <div class="who">김영서 (Youngseo Kim) <em>— UCLA, Los Angeles · 교통망 이론</em></div>
+      <div class="why">임용 1년차, 포닥 모집 중이고 <strong>지원 폼이 공개</strong>돼 있어. 서울대 학부·석사(김동규) → Cornell 박사(Samaranayake). 멤버가 아직 공개되지 않은 신규 랩이라 <strong>포닥 1호</strong> — 협상력이 가장 좋아. 미국 국적이면 FHWA 과제 소속이라는 점도 유리해(연방 과제는 국적자 채용이 행정적으로 간단). 다만 h-index 7, 피인용 321로 아직 쌓이는 중이니 레터 무게보다 주도권을 사는 선택이야. 같은 UCLA ITS에 포닥 펠로 프로그램도 따로 있어서 한 번에 두 경로를 볼 수 있어.</div>
+      <div class="act">→ 지원 폼 제출 + 확인 메일 (youngseo@ucla.edu)</div>
+    </div></div>
+
+    <div class="q"><div class="n"></div><div class="qbody">
+      <div class="who">Takahiro Yabe <em>— NYU Tandon TMI + CUSP, Brooklyn · 복잡계 네트워크</em></div>
+      <div class="why">네 궤적과 가장 닮은 사람. <strong>Resilient Urban Networks Lab</strong>을 운영하고 대표작이 "Behaviour-based dependency networks between places shape urban economic resilience"(Nature Human Behaviour 2024) — 장소 간 의존 네트워크로 도시 경제 복원력을 설명해. 경로가 <strong>도쿄대 학부·석사 → Purdue 박사(Ukkusuri) → MIT Media Lab·IDSS 포닥 → NYU 조교수</strong>라 <strong>일본어가 그대로 통하고</strong> 교통공학에서 Nature/PNAS 트랙으로 넘어간 드문 사례야. 피인용 2,835. 공개 공고는 없어서 콜드메일 대상.</div>
+      <div class="act">→ takahiroyabe@nyu.edu · 지도교수 Ukkusuri 경유 소개도 가능</div>
+    </div></div>
+
+    <div class="q"><div class="n"></div><div class="qbody">
+      <div class="who">Andres Sevtsuk <em>— MIT DUSP, Cambridge · 도시공학 × 교통</em></div>
+      <div class="why"><strong>Urban Network Analysis 툴박스</strong>의 저자야 — 가로망 위 보행류를 모델링하고 토지이용·교통 연계 개발을 분석하는 도구로, 전 세계 연구자·실무자가 써. 도시설계·공간분석·교통을 한 랩(City Form Lab)에서 다루는 드문 조합이라 네 "도시공학 연계" 요구에 가장 정확히 맞아. 미국 국적이면 바로 채용 가능. 공개 공고는 없어서 콜드메일.</div>
+      <div class="act">→ City Form Lab 홈페이지 경유, 네 박사 주제를 가로망 쪽으로 번역해서 제안</div>
+    </div></div>
+
+    <div class="q"><div class="n"></div><div class="qbody">
+      <div class="who">Zhan Zhao <em>— HKU, Hong Kong · 복잡계 네트워크</em></div>
+      <div class="why">포닥 상시 모집 + <strong>RGC Postdoctoral Fellowship 동반 지원</strong>. 포닥 1명(2025.10 합류), 박사 7명. 구성원 이전 소속은 중국 본토 중심이지만 <strong>UBC·Penn·Michigan 출신도 섞여</strong> 있어 북미 학위자 전례가 있어.</div>
+      <div class="act">→ zhanzhao@hku.hk, CV + 연구 아이디어 + RGC PDF 동시 타진</div>
+    </div></div>
+
+    <div class="q"><div class="n"></div><div class="qbody">
+      <div class="who">미국 국적으로만 열리는 트랙 <em>— LBNL · Sandia 계열</em></div>
+      <div class="why"><strong>LBNL Sustainable Transportation Initiative</strong>는 <strong>통합 토지이용-교통 모델</strong>로 포닥을 뽑은 이력이 있어(현재 공고는 마감). Mobility Decision Science 그룹도 있고, 클리어런스가 필요 없어 국적 요건이 느슨하지만 국적자가 행정적으로 훨씬 간단해. jobs.lbl.gov를 주기적으로 봐야 하는 자리야. 국방계(Sandia·LANL·LLNL)는 사실상 국적자 전용이고 Sandia Truman/Hruby 펠로십은 국적을 명시 요구 — 네트워크 복원력·인프라 쪽이면 지원 가능.</div>
+      <div class="act">→ jobs.lbl.gov 모니터링 + transportation.lbl.gov Work With Us</div>
+    </div></div>
+
+    <div class="q"><div class="n"></div><div class="qbody">
+      <div class="who">공고 기반 즉시 지원 <em>— Chalmers · KTH · MIT</em></div>
+      <div class="why">Chalmers는 공공교통 네트워크의 <strong>확률 편미분방정식(SPDE)</strong> 모델링 2년 포닥 — 수학적 이론 지향이면 표 안에서 가장 잘 맞아. KTH는 혼잡통행료·ABM·후생분석 포닥이고, 그 Division of Transport Planning의 책임자가 <strong>네트워크 취약성 이론의 Erik Jenelius</strong>라 주제 연결이 자연스러워. MIT는 SMART M3S 포닥 2건.</div>
+      <div class="act">→ EURAXESS / academicpositions / mobility.mit.edu/openings</div>
+    </div></div>
+
+  </div>
+</section>
+
+<section>
+  <h2>후보 PI 전체</h2>
+  <p class="sub">행을 누르면 링크·이메일·주소·대표논문·연구실 구성이 펼쳐져. <span class="vmark">확인필요</span> 는 소속·직급이 일반 지식 기반이라는 뜻.</p>
+
+  <div class="toolbar">
+    <div class="filters">
+      <div class="fgroup"><span class="flabel">분류</span><div class="chips" id="f-cat"></div></div>
+      <div class="fgroup"><span class="flabel">지역</span><div class="chips" id="f-region"></div></div>
+      <div class="fgroup"><span class="flabel">포닥 신호</span><div class="chips" id="f-signal"></div></div>
+      <div class="fgroup"><span class="flabel">추리기</span><div class="chips">
+        <button type="button" class="chip" id="f-urban">도시공학 연계만</button>
+        <button type="button" class="chip" id="f-mark">★ 체크한 곳만</button></div></div>
+      <div class="fgroup grow"><span class="flabel">검색</span>
+        <input type="search" id="q" placeholder="이름 · 대학 · 도시 · 키워드 (예: 균형, JSPS, Nature)"></div>
+    </div>
+    <div class="savenote" id="savenote"></div>
+  </div>
+
+  <div class="thead outerrow" id="thead">
+    <div></div>
+    <div class="gridrow">
+      <div></div>
+      <div class="c c-name" data-sort="name">PI <span class="arrow">&#8597;</span></div>
+      <div class="c c-loc" data-sort="inst">소속 · 위치 <span class="arrow">&#8597;</span></div>
+      <div class="c c-cat" data-sort="cat">분류 <span class="arrow">&#8597;</span></div>
+      <div class="c c-rank" data-sort="rank">직급 · 연차 <span class="arrow">&#8597;</span></div>
+      <div class="c c-pd" data-sort="pd">포닥 <span class="arrow">&#8597;</span></div>
+      <div class="c c-sig" data-sort="sig">포닥 신호 <span class="arrow">&#8597;</span></div>
+    </div>
+  </div>
+  <div id="rows"></div>
+</section>
+
+<section>
+  <h2>전략 노트</h2>
+  <div class="notes">
+
+    <div class="note">
+      <h3><span class="k">01</span> 타이밍</h3>
+      <p>졸업 <strong>6~9개월 전</strong>이 콜드메일 최적 구간. 더 일찍이면 교수가 예산을 못 잡고, 더 늦으면 이미 채워져 있어.</p>
+      <p>미국 신규 임용 교수의 startup fund는 임용 후 <strong>2~3년에 걸쳐 소진</strong>돼. <strong>1~2년차 교수</strong>가 "포닥 1호"를 뽑는 창이 가장 넓어 — 김영서·Zhichen Liu·Yabe, 그리고 이동 직후인 Iryo가 지금 그 구간이야.</p>
+      <p>JSPS는 사이클이 길어. 공모 시점과 부임 희망 시점을 역산해서 <strong>1년 전부터</strong> 호스트와 접촉해야 해.</p>
+    </div>
+
+    <div class="note">
+      <h3><span class="k">02</span> 공고는 빙산의 끝</h3>
+      <p>교통 분야 포닥은 상당수가 <strong>공고 없이</strong> 채워져. 과제가 수주되면 교수가 먼저 아는 사람·추천·학회에서 본 사람에게 연락하고, 안 되면 공고를 내. <strong>공고가 떴다는 건 이미 1차 라운드가 끝났다는 뜻</strong>일 때가 많아.</p>
+      <p>그래서 "미확인" 행을 버리면 안 돼. 오히려 거기가 경쟁이 없어.</p>
+    </div>
+
+    <div class="note">
+      <h3><span class="k">03</span> 외부 펠로십</h3>
+      <p>Lijun Sun 랩의 포닥 3명 중 2명이 CSC 자금으로 왔다는 게 증거야. <strong>예산이 안 드는 포닥</strong>은 거절할 이유가 거의 없어.</p>
+      <ul>
+        <li>일본 <strong>JSPS</strong> — 네 국적이 Short-term(PE) 자격 요건. 1순위</li>
+        <li>홍콩 <strong>RGC PDF</strong> — HKU·HKUST, 12월 전후</li>
+        <li>캐나다 <strong>NSERC PDF</strong> — McGill·UBC·Toronto</li>
+        <li>미국 <strong>Sandia Truman/Hruby</strong> — 국적 요구, 국적 이점이 직접 작동</li>
+        <li>유럽 <strong>MSCA PF</strong> — 국적 무관이라 네 이점은 없음</li>
+      </ul>
+    </div>
+
+    <div class="note">
+      <h3><span class="k">04</span> 신규 랩 vs 대형 랩</h3>
+      <p>표의 피인용 수를 레터 무게의 대리지표로 봐. Barthelemy 47,972 · González 30,003 · Levinson 25,000+ · Ukkusuri 19,948 · Yafeng Yin 16,166 vs 김영서 321 · Zhichen Liu 172 · Yabe 2,835 — 같은 "포닥"이 아니야.</p>
+      <p><strong>신규 랩</strong>: 1저자·주도권, 밀착 지도. 대신 레터 영향력이 약하고 교수가 테뉴어 압박으로 조급할 수 있어.</p>
+      <p><strong>대형 랩</strong>: 레터 한 장의 무게, 과제 안정성. 대신 포닥 N명 중 1명.</p>
+      <p>교수 임용이 목표면 <strong>섞는 게 정석</strong>.</p>
+    </div>
+
+    <div class="note">
+      <h3><span class="k">05</span> 교통계획으로 넓히면</h3>
+      <p>교통망 이론만 보면 자리 수가 적어. <strong>계획·정책 쪽은 기관 단위 포닥 프로그램</strong>이 있어서 PI 개인 예산에 안 기대는 게 장점이야.</p>
+      <ul>
+        <li><strong>UC Davis ITS</strong> — 능동교통 안전·네트워크 모델링, AV 행동반응, 대중교통 재정·거버넌스</li>
+        <li><strong>UCLA ITS</strong> — 포닥 펠로 프로그램. 김영서 교수와 같은 기관</li>
+        <li><strong>U Chicago Mansueto</strong> — 도시과학 포닥 펠로</li>
+        <li><strong>LBNL</strong> — 통합 토지이용-교통 모델</li>
+      </ul>
+      <p>이쪽은 네트워크 이론 실적을 "계획 문제에 쓸 수 있는 사람"으로 번역해서 파는 게 핵심이야.</p>
+    </div>
+
+    <div class="note">
+      <h3><span class="k">06</span> 콜드메일 뼈대</h3>
+      <p>3문단을 넘기지 마.</p>
+      <ul>
+        <li><strong>1문단</strong> — 누구인지 + 졸업 시점 + 박사 주제 한 문장 + <strong>"U.S. citizen, no visa sponsorship required"</strong></li>
+        <li><strong>2문단</strong> — 그 교수의 <em>특정 논문</em>과 네 연구의 접점. 표의 대표논문 칸을 쓰되 요약을 돌려주지 말고 네가 확장할 지점을 말해</li>
+        <li><strong>3문단</strong> — 가져올 <strong>연구 아이디어 한 단락</strong> + 지원 가능한 펠로십</li>
+        <li>일본 랩이면 일본어 메일을 병기해. 그 자체가 차별점이야</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="legend">
+  <span class="lh">표 읽는 법</span>
+  <dl>
+    <dt><span class="cat">교통망 이론</span></dt><dd>균형·통행배정(정적/동적)·네트워크 설계·신뢰성·취약성·경로선택 이론.</dd>
+    <dt><span class="cat">복잡계 네트워크</span></dt><dd>공간·그래프 네트워크, 스케일링, 복원력, 인간 모빌리티 패턴. 물리·데이터 저널 트랙.</dd>
+    <dt><span class="cat">대중교통·수요</span></dt><dd>대중교통 할당, 수요·이산선택 모델링, 접근성, 토지이용-교통, 교통정책·재정.</dd>
+    <dt><span class="cat">데이터·ML</span></dt><dd>ML·생성형 AI 기반 모빌리티 모델링, 시공간 데이터.</dd>
+    <dt><span class="cat urb" style="display:inline-block">도시공학 연계</span></dt><dd>소속 학과 또는 세부분야가 도시공학·도시계획과 걸쳐 있는 곳. 학과명과 세부분야로만 판정했고 논문 제목은 제외했어(논문에 "urban"이 과다하게 붙어서).</dd>
+    <dt><span class="tag open">공개 모집</span></dt><dd>포닥 모집 공고·공지를 직접 확인한 곳.</dd>
+    <dt><span class="tag standing">상시 · 문의</span></dt><dd>openings 페이지를 운영하거나 포닥 문의를 상시 받는다고 명시한 곳.</dd>
+    <dt><span class="tag past">공고 마감</span></dt><dd>최근 공고가 있었으나 마감됨. 과제 자금 신호이므로 콜드메일 여지는 있어.</dd>
+    <dt><span class="tag unknown">미확인</span></dt><dd>공개된 모집 정보를 못 찾음. 없다는 뜻이 아니야 — 전략 노트 02 참고.</dd>
+    <dt><span class="vmark">확인필요</span></dt><dd>소속·직급이 일반 지식 기반. 대표논문도 이 경우 인용 정보가 미검증이야.</dd>
+    <dt style="font-family:var(--display);font-size:12px">★ 체크박스</dt><dd>각 행 왼쪽의 체크박스로 관심 표시를 해둘 수 있습니다. 체크한 행은 왼쪽에 초록 선이 붙고, 상단 "★ 체크한 곳만" 버튼으로 걸러볼 수 있습니다. 저장 위치는 열어본 환경에 따라 다르며, 표 위 안내문에 현재 상태가 표시됩니다 — 정적 호스팅(GitHub Pages 등)에서는 <strong style="color:var(--ink)">이 브라우저에만</strong> 저장되고 다른 기기와 동기화되지 않습니다.</dd>
+  </dl>
+
+  <div class="caveat">
+    <b>이메일을 추측하지 않은 이유</b> — 대학 이메일은 패턴이 있지만 틀리면 콜드메일이 그냥 사라져. 그래서 <b>공식 페이지·CV·Scholar에서 실제로 확인한 주소만</b> 넣었고, 나머지는 "미확인"으로 두고 홈페이지 링크를 붙였어. 링크를 눌러 직접 확인하는 게 추측 주소로 보내는 것보다 빨라. <b>홈페이지·Scholar 링크</b>도 같은 원칙이야 — 실제로 본 URL만 버튼으로 걸었고, 없는 곳은 이름+소속 검색 링크를 걸어뒀어(404로 보내지 않기 위해). <b>주소</b>는 캠퍼스·건물 수준까지만 확인된 곳이 많고 호실은 대부분 미확인이야.
+  </div>
+
+  <div class="src">
+    <b>확인에 사용한 1차 출처</b><br>
+    Google Scholar 프로필(김영서 · Oyama · Iryo · Zhichen Liu · Kenan Zhang · Szell · Yafeng Yin · Yabe · Marta González · Cats · Nie · Ukkusuri · Hong K. Lo · Xuesong Zhou · Ouyang · Jenelius · Barthelemy · Arcaute · Boeing · Osorio · Habib · Schmöcker · Levinson) · researchmap(Iryo 이력) · UCLA Samueli 신임교원 &amp; UCLA ITS · Stony Brook CEE &amp; M2 Lab team · EPFL HOMES team · Lijun Sun 랩 people · MIT Mobility openings · HKU Zhan Zhao team/openings · yuki-oyama.github.io · takayabe.net &amp; NYU Tandon · MIT DUSP &amp; City Form Lab · U Chicago Mansueto · Georgia Tech 도시계획 · UC Davis ITS 포닥 공고 · UW CEE · Berkeley CED · UCLA Luskin · transportation.lbl.gov &amp; jobs.lbl.gov · JSPS FY2026 Application Guidelines · DDETFP 공고 · UBC 포닥 공고 · Cornell Academic Jobs Online · Chalmers/KTH 공고 · BTR Job Board · Network Science Society jobs · EURAXESS
+  </div>
+</div>
+</div>
+
+<script>
+const SIGLABEL={open:"공개 모집",standing:"상시 · 문의",past:"공고 마감",unknown:"미확인"};
+const SIGORDER={open:0,standing:1,past:2,unknown:3};
+const CATORDER={"교통망 이론":0,"복잡계 네트워크":1,"대중교통·수요":2,"데이터·ML":3,"—":4};
+const G=n=>"https://www.google.com/search?q="+encodeURIComponent(n);
+const S=n=>"https://scholar.google.com/scholar?q="+encodeURIComponent(n);
+
+const DATA=[
+{name:"Yuki Oyama",inst:"University of Tokyo",dept:"Civil Eng. · ActScape Lab / BinN",region:"아시아·오세아니아",country:"일본",city:"도쿄",addr:"혼고 캠퍼스, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656",cat:"교통망 이론",rank:"부교수",yr:"부교수",rs:2,field:"Markovian 경로선택(link-based / recursive logit), network GEV, 보행 활동 네트워크, 도시물류, 도시 네트워크 설계",pd:null,pdText:"미확인",origins:"미확인. PI는 도쿄대 박사(2017) → EPFL TRANSP-OR 연구원(2017–19) → 도쿄대",korea:"확인 안 됨",fit:"JSPS 호스트 자격 충족(부교수). 일본어로 랩 내부 소통 가능 — BinN 계열은 세미나가 일본어. 네 두 강점이 동시에 작동하는 1순위",email:"oyama@bin.t.u-tokyo.ac.jp",home:"https://yuki-oyama.github.io/",sch:"https://scholar.google.co.jp/citations?user=QnQe3yQAAAAJ",metrics:"피인용 498 · h-index 11 · i10 12",papers:[["Markovian traffic equilibrium assignment based on network generalized extreme value model","Transportation Research Part B, 2022 · 피인용 44"],["A discounted recursive logit model for dynamic gridlock network analysis","Transportation Research Part C, 2017 · 피인용 94"],["Prism-based path set restriction for solving Markovian traffic assignment problem","Transportation Research Part B, 2019 · 피인용 41"],["Link-based measurement model to estimate route choice parameters in urban pedestrian networks","Transportation Research Part C, 2018 · 피인용 50"]],sig:"standing",sigText:"JOIN-US 페이지 운영",v:1,note:"경로 열거 없이 네트워크 균형을 푸는 link-based 이론의 핵심"},
+
+{name:"Takamasa Iryo",inst:"University of Tokyo",dept:"Graduate School of Engineering (2025.04 부임)",region:"아시아·오세아니아",country:"일본",city:"도쿄",addr:"혼고 캠퍼스, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656",cat:"교통망 이론",rank:"정교수",yr:"정교수 · 2025.04 부임",rs:3,field:"동적 교통망 균형의 유일성·존재성, 진화동역학, 불안정 교통시스템 안정화, Markov chain mixing time, 확률과정 통행배정",pd:null,pdText:"미확인 (이동 직후 — 랩 재구성 단계)",origins:"미확인",korea:"확인 안 됨",fit:"JSPS 호스트 자격 충족(정교수). 이동 직후라 신규 구성 시점 + 일본어 — 타이밍과 강점이 겹치는 자리",email:"미확인",home:"https://researchmap.jp/takamasa_iryo?lang=en",sch:"https://scholar.google.com/citations?user=OcFUGDoAAAAJ",metrics:"피인용 1,632 · h-index 19 · i10 33",papers:[["Properties of dynamic user equilibrium solution","Transportmetrica B, 2013 · 피인용 61"],["On the uniqueness of equilibrated dynamic traffic flow patterns in unidirectional networks","교통망 이론 대표작"],["Estimating Markov chain mixing times: Convergence rate towards equilibrium of a stochastic process traffic assignment model","확률과정 통행배정"],["Microscopic pedestrian simulation model combined with a tactical model for route choice behaviour","Transportation Research Part C, 2010 · 피인용 248"]],sig:"unknown",sigText:"이동 직후 — 신규 랩 구성 시점이라 콜드메일 타이밍이 좋을 수 있음",v:1,note:"고베대(2013–20) → 도호쿠대(2020–25) → 도쿄대(2025–). 순수 교통망 이론 세계 최상위"},
+
+{name:"김영서 Youngseo Kim",inst:"UCLA",dept:"Civil & Environmental Eng.",region:"북미",country:"미국",city:"로스앤젤레스",addr:"Boelter Hall 4731J, 580 Portola Plaza, Los Angeles, CA 90095",cat:"교통망 이론",rank:"조교수",yr:"조교수 · 2025.07 (1년차)",rs:1,field:"네트워크 시스템 이론, 멀티모달 조정, 인간행동, 강화학습, 게임이론, 수리계획",pd:0,pdText:"포닥 0명 (모집 중) · 멤버 미공개 신규 랩",origins:"미공개. PI는 서울대 학부·석사(김동규) → Cornell 박사(Samaranayake)",korea:"PI가 서울대 출신 — 한국어 소통 가능, 국내 학계 네트워크 공유",fit:"미국 국적 → FHWA 연방 과제 소속이라 국적자 채용이 행정적으로 간단. 비자 마찰 0",email:"youngseo@ucla.edu",home:"https://sites.google.com/cornell.edu/youngseokim/home",sch:"https://scholar.google.com/citations?user=meKaZywAAAAJ",metrics:"피인용 321 · h-index 7 · i10 5",papers:[["A comparative analysis of the users of private cars and public transportation for intermodal options under Mobility-as-a-Service in Seoul","Travel Behaviour and Society, 2021 · 피인용 105"],["Tourists' preference on the combination of travel modes under Mobility-as-a-Service environment","Transportation Research Part A, 2021 · 피인용 89"],["An online approach to solve the dynamic vehicle routing problem with stochastic trip requests for paratransit services","ACM/IEEE ICCPS, 2022 · 피인용 36"],["Interpretable machine-learning models for estimating trip purpose in smart card data","ICE Municipal Engineer, 2021 · 피인용 40"]],sig:"open",sigText:"임용 발표 시 포닥 모집 명시. 지원 폼 공개(forms.gle/ngi2KqfQ5Y2gHYuWA). FHWA Mobility Center of Excellence 소속",v:1,note:"신규 랩 포닥 1호 — 협상력 최상"},
+
+{name:"Lijun Sun",inst:"McGill University",dept:"Civil Eng. · William Dawson Scholar",region:"북미",country:"캐나다",city:"몬트리올",addr:"817 Sherbrooke St. W., Macdonald Engineering Bldg 278C, Montreal, QC H3A 0C3",cat:"데이터·ML",rank:"부교수",yr:"부교수",rs:2,field:"시공간 데이터 마이닝, 텐서·저랭크 모델, 생성형 AI 기반 수요·활동 모델링, LLM 기반 선택 추론",pd:3,pdText:"포닥 3 (Yu Tang 2026.3 · Jian Zhang 2025.1 · Yang Zhao 2024.8) · 박사 8",origins:"포닥 3명 중 2명이 CSC(중국국가유학기금) 자금. 방문연구자 이전 소속은 중국 기관 중심(BUPT·통지·칭화·베이징교통대·중산대) + EPFL",korea:"확인 안 됨",fit:"캐나다라 미국 국적 이점은 없음. 대신 NSERC PDF를 끼면 CSC 사례와 같은 논리가 작동",email:"미확인",home:"https://lijunsun.github.io/",sch:S("Lijun Sun McGill spatiotemporal transportation"),metrics:"",papers:[["Understanding metropolitan patterns of daily encounters","PNAS (대표작 · 인용 정보 미검증)"],["Bayesian temporal factorization for multidimensional time series prediction","IEEE TPAMI (대표작 · 인용 정보 미검증)"]],sig:"open",sigText:"포닥 2자리 공개 모집 — ① LLM 기반 mobility choice reasoning + trip-chain 합성(24개월) ② 생성형 AI 기반 가구 단위 activity schedule 생성(12개월)",v:1,note:"2024·2025·2026 연속 포닥 영입 — 외부 펠로십 지원자를 적극 수용"},
+
+{name:"Takahiro Yabe",inst:"NYU Tandon",dept:"Technology Management & Innovation + CUSP · Resilient Urban Networks (RUN) Lab",region:"북미",country:"미국",city:"뉴욕 (브루클린)",addr:"370 Jay Street, Floor 13, Brooklyn, NY 11201",cat:"복잡계 네트워크",rank:"조교수",yr:"조교수 (주니어)",rs:1,field:"장소 간 의존 네트워크, 도시 복원력(재난·팬데믹), 계산사회과학, 네트워크 과학, 지오공간 AI",pd:null,pdText:"미확인 (홈페이지에 멤버 로스터 미공개)",origins:"PI는 도쿄대 학부·석사 → Purdue 박사(Satish Ukkusuri, Seungyoon Lee) → MIT IDSS·Media Lab 포닥(Pentland, Esteban Moro)",korea:"확인 안 됨",fit:"일본어 — PI가 도쿄대 학부·석사 출신이라 일본어가 그대로 통함. 미국 국적 — 비자 마찰 0. 두 강점이 모두 작동하는 드문 조합",email:"takahiroyabe@nyu.edu",home:"https://www.takayabe.net/",sch:"https://scholar.google.com/citations?user=3xgVhssAAAAJ",metrics:"피인용 2,835",papers:[["Behaviour-based dependency networks between places shape urban economic resilience","Nature Human Behaviour, 2024 — 거리 기반 모델 대비 사업체 복원력 예측 약 40% 개선"],["Toward data-driven, dynamical complex systems approaches to disaster resilience","PNAS, 2022 · 피인용 193"],["Non-compulsory measures sufficiently reduced human mobility in Tokyo during the COVID-19 epidemic","2020 · 피인용 313"],["Mobile phone location data for disasters: A review from natural hazards and epidemics","2022 · 피인용 222"]],sig:"unknown",sigText:"공개 공고 없음 — 콜드메일 대상. 지도교수 Ukkusuri 경유 소개 경로 가능",v:1,note:"교통공학 → Nature/PNAS 트랙으로 넘어간 드문 사례. 복잡계 전환 롤모델"},
+
+{name:"Andres Sevtsuk",inst:"MIT",dept:"DUSP · City Form Lab (City Design & Development Group 책임)",region:"북미",country:"미국",city:"보스턴 (케임브리지)",addr:"MIT DUSP, 77 Massachusetts Ave, Cambridge, MA 02139 (호실 미확인)",cat:"복잡계 네트워크",rank:"부교수",yr:"Spaulding 부교수 (Urban Science & Planning)",rs:2,field:"가로망 기반 보행류 모델링, Urban Network Analysis 툴박스, 토지이용-교통 연계 개발, 저층부·상업시설 입지, 보행친화 도시설계",pd:null,pdText:"미확인",origins:"미확인. 도시정부·국제기구·설계사무소와 협업 다수(미국·인도네시아·호주·레바논·에스토니아·싱가포르)",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. 싱가포르·인도네시아 등 아시아 프로젝트가 많아 동아시아 맥락 이해도도 높음",email:"미확인",home:"https://cityform.mit.edu/",sch:S("Andres Sevtsuk urban network analysis"),metrics:"",papers:[["Urban Network Analysis toolbox","가로망 위 보행류 모델링 + 토지이용-교통 연계 분석 도구. 전 세계 연구자·실무자 사용"],["Analysis and planning of urban networks","도시 네트워크 분석·계획 (인용 정보 미검증)"]],sig:"unknown",sigText:"공개 공고 없음 — 콜드메일 대상",v:1,urban:1,note:"도시설계 × 공간분석 × 교통을 한 랩에서 다루는 드문 조합. '도시공학 연계' 요구에 가장 정확히 맞음"},
+
+{name:"Zhan Zhao",inst:"University of Hong Kong",dept:"Urban Planning & Design",region:"아시아·오세아니아",country:"홍콩",city:"홍콩",addr:"HKU 본캠퍼스, Pokfulam Road (건물 미확인)",cat:"복잡계 네트워크",rank:"조교수",yr:"조교수",rs:1,field:"인간 모빌리티 모델링, 네트워크 과학, 공유 모빌리티, 시공간 데이터 마이닝, Urban AI",pd:1,pdText:"포닥 1 (Yijia Hu, 2025.10 합류) · 박사 7",origins:"중국 본토 대학 중심(통지·베이징대·충칭·우한·HIT·칭화·저장) + 북미(UBC·Penn·Michigan). 북미 학위자를 받아본 랩",korea:"확인 안 됨",fit:"국적·언어 이점은 약하지만 RGC PDF로 자금을 들고 갈 수 있음. 영어로 운영",email:"zhanzhao@hku.hk",home:"https://zhanzhaowf.github.io/",sch:S("Zhan Zhao urban mobility HKU"),metrics:"",papers:[["Individual mobility prediction using transit smart card data","Transportation Research Part C, 2018 (대표작 · 인용 정보 미검증)"]],sig:"standing",sigText:"Post-Doctoral Fellow 상시 모집. RGC Postdoctoral Fellowship 동반 지원 권장",v:1,urban:1,note:"선택한 분야를 넓게 덮음"},
+
+{name:"Zhichen Liu",inst:"Stony Brook University",dept:"Civil Eng. · M2 Lab",region:"북미",country:"미국",city:"뉴욕시 (동쪽 100km, Long Island)",addr:"Dept. of Civil Engineering, Stony Brook, NY 11794 (호실 미확인)",cat:"교통망 이론",rank:"조교수",yr:"조교수 · 2025 (1년차)",rs:1,field:"AI 기반 교통망 모델링·최적화, user equilibrium 학습, 인간-자율차 상호작용, 다중수단 교통경제·규제",pd:0,pdText:"포닥 0 · 박사 2 (Zhanyu Feng, Rui Chen) · 학부 3",origins:"PI는 Michigan 박사(2025, Yafeng Yin) + Michigan IOE 석사(2024)",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. 신규 랩이라 startup fund 단계로 예산이 빡빡한데 국적자면 그 부담이 줄어",email:"zhichen.liu@stonybrook.edu",home:"https://zhichen6.github.io/",sch:"https://scholar.google.com/citations?user=RoB_K0YAAAAJ",metrics:"피인용 172 · h-index 5 · i10 4",papers:[["End-to-end learning of user equilibrium with implicit neural networks","Transportation Research Part C 150, 2023 (with Y. Yin) · 피인용 66"],["End-to-end learning of user equilibrium: Expressivity, generalization, and optimization","Transportation Science 59(4), 2025 · 피인용 23"],["Regulatory policies to electrify ridesourcing systems","Transportation Research Part C 141, 2022 · 피인용 35"],["Dynamic origin-destination flow prediction using spatial-temporal graph convolution network with mobile phone data","IEEE ITS Magazine 14(5), 2021 · 피인용 33"]],sig:"standing",sigText:"openings 페이지 운영. 포닥 명시는 없음 — startup fund 단계",v:1,note:"균형 이론을 신경망으로 end-to-end 학습 — 이론 + ML 교차점"},
+
+{name:"Yafeng Yin",inst:"University of Michigan",dept:"CEE + IOE · LIMOS",region:"북미",country:"미국",city:"앤아버 (디트로이트 60km)",addr:"2350 Hayward St, Ann Arbor, MI 48109 (G.G. Brown, 호실 미확인)",cat:"교통망 이론",rank:"정교수",yr:"정교수",rs:3,field:"교통망 균형·가격정책, bilevel 최적화, 다중수단 시스템 효율·복원력, AV 운영, 라이드소싱 시장",pd:null,pdText:"중대형 · people 페이지 접근 차단으로 정확한 수 미확인",origins:"미확인. 배출 이력: Sina Bahrami → TU Eindhoven 조교수, Ali Shirazi → U Maine 조교수, Zhichen Liu → Stony Brook 조교수",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. 대형 랩이라 포닥 회전이 있고 교수 임용 배출 파이프라인이 분야 최상위",email:"미확인",home:"https://limos.engin.umich.edu/",sch:"https://scholar.google.com/citations?user=GWXVM1cAAAAJ",metrics:"피인용 16,166 · h-index 71 · i10 170",papers:[["Genetic-algorithms-based approach for bilevel programming models","J. Transportation Engineering, 2000 · 피인용 433"],["Economic analysis of ride-sourcing markets","Transportation Research Part C, 2016 · 피인용 452"],["Optimal deployment of public charging stations for plug-in hybrid electric vehicles","Transportation Research Part B, 2013 · 피인용 733"],["Deploying public charging stations for electric vehicles on urban road networks","Transportation Research Part C, 2015 · 피인용 480"]],sig:"standing",sigText:"포닥 상시. 포닥 → 교수 임용 배출 트랙레코드가 분야 최상위권",v:1,note:"교수 임용이 목표면 가장 검증된 파이프라인 중 하나"},
+
+{name:"Kenan Zhang",inst:"EPFL",dept:"HOMES · Human-Oriented Mobility Eco-system",region:"유럽",country:"스위스",city:"로잔 (제네바 60km)",addr:"EPFL 캠퍼스, CH-1015 Lausanne (건물 미확인)",cat:"교통망 이론",rank:"조교수 (TT)",yr:"테뉴어트랙 조교수",rs:1,field:"라이드헤일링 시장균형, selfish routing 제어, 네트워크 경제, 공유·온디맨드 모빌리티",pd:2,pdText:"연구원 2 (Xiaoyan Wang 외) · 박사 5 + 방문 박사 2 · 총 11명",origins:"PI는 칭화 학부 → CMU 석사 → Northwestern 박사(Y.M. Nie) → ETH 포닥. 구성원에 중국·유럽 혼합",korea:"확인 안 됨",fit:"유럽 — 두 강점이 거의 작동하지 않음. 자리 자체의 질로 판단할 곳",email:"미확인 (people.epfl.ch 참조)",home:"https://www.epfl.ch/labs/homes/",sch:"https://scholar.google.com/citations?user=sLlgZkYAAAAJ",metrics:"피인용 1,228 · h-index 15 · i10 20",papers:[["To pool or not to pool: Equilibrium, pricing and regulation","Transportation Research Part B, 2021 (with Y.M. Nie) · 피인용 154"],["Mitigating the impact of selfish routing: An optimal-ratio control scheme","Transportation Research Part C, 2018 · 피인용 155"],["Inter-platform competition in a regulated ride-hail market with pooling","Transportation Research Part E, 2021 · 피인용 101"]],sig:"standing",sigText:"Open Positions 페이지 운영",v:1,note:"주니어지만 EPFL 인프라를 쓸 수 있는 드문 조합"},
+
+{name:"Cynthia Chen",inst:"University of Washington",dept:"CEE + ISE · THINK Lab",region:"북미",country:"미국",city:"시애틀",addr:"미확인",cat:"복잡계 네트워크",rank:"정교수",yr:"정교수 · USDOT 센터 Associate Director",rs:3,field:"여행행동, 네트워크 내 연쇄 과정(cascading), 도시 복원력, 빅데이터 편향, 대·소규모 데이터 융합",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. USDOT 연방 과제(National Center for Understanding Future Travel Behavior and Demand) 부소장이라 연방 자금 자리에 국적이 유리",email:"qzchen@uw.edu",home:"https://www.ce.washington.edu/facultyfinder/cynthia-chen",sch:S("Cynthia Chen University of Washington travel behavior network"),metrics:"",papers:[["PNAS · Nature Cities 등 학제 저널 게재 (구체 서지 미확인)",""]],sig:"unknown",sigText:"공개 공고 없음. USDOT 센터 운영 중이라 과제 기반 자리가 생길 여지 있음",v:1,note:"교통계획·여행행동과 네트워크 연쇄 과정을 함께 다룸 — 네 분야 교차점"},
+
+{name:"Satish Ukkusuri",inst:"Purdue University",dept:"Lyles School of Civil Eng. · Urban Mobility Networks and Intelligence Lab",region:"북미",country:"미국",city:"웨스트라피엣 (시카고 200km)",addr:"미확인",cat:"교통망 이론",rank:"정교수",yr:"Hubert & Audrey Kleasen 석좌교수",rs:3,field:"동적 통행배정, 네트워크 복원력·재난 대응, 상호의존 네트워크, 커넥티드·자율 교통, 공유 모빌리티, 스마트 물류",pd:null,pdText:"대형 · 미확인",origins:"미확인. 배출 이력: Takahiro Yabe → MIT 포닥 → NYU 조교수",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. Yabe의 지도교수라 복잡계·교통망 양쪽 경로를 아는 랩",email:"미확인",home:"https://web.ics.purdue.edu/~sukkusur/",sch:"https://scholar.google.com/citations?user=9gmoT80AAAAJ",metrics:"피인용 19,948",papers:[["동적 통행배정 · 네트워크 복원력 계열 다수 (대표논문 서지 미확인)",""]],sig:"unknown",sigText:"",v:1,note:"Yabe의 지도교수 — 소개 경로로도 활용 가능"},
+
+{name:"Yu (Marco) Nie",inst:"Northwestern University",dept:"Civil & Environmental Eng.",region:"북미",country:"미국",city:"시카고 (에반스턴)",addr:"A328 Technological Institute, Evanston, IL 60208",cat:"교통망 이론",rank:"정교수",yr:"정교수",rs:3,field:"교통망 균형·통행배정 알고리즘, 네트워크 가격정책, 신뢰성 기반 경로선택, 공유 모빌리티, EV 충전 인프라",pd:null,pdText:"미확인",origins:"미확인. 배출 이력: Kenan Zhang → EPFL 조교수",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0",email:"y-nie@northwestern.edu",home:"https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/nie-yu.html",sch:"https://scholar.google.com/citations?user=WNXai7cAAAAJ",metrics:"피인용 8,656",papers:[["Shortest path problem considering on-time arrival probability","Transportation Research Part B, 2009 · 피인용 425"],["How can the taxi industry survive the tide of ridesourcing? Evidence from Shenzhen, China","2017 · 피인용 362"],["Models and algorithms for the traffic assignment problem with link capacity constraints","2004 · 피인용 250"],["A corridor-centric approach to planning electric vehicle charging infrastructure","2013 · 피인용 326"]],sig:"unknown",sigText:"",v:1,note:"통행배정 알고리즘 이론 정통파. Kenan Zhang 배출"},
+
+{name:"Stephen Boyles",inst:"UT Austin",dept:"Maseeh Dept. of Civil, Architectural & Env. Eng.",region:"북미",country:"미국",city:"오스틴",addr:"Ernest Cockrell Jr. Hall (ECJ) 6.204, Austin, TX",cat:"교통망 이론",rank:"교수",yr:"교수 · NSF CAREER",rs:3,field:"정적·동적 통행배정, 네트워크 균형 이론, 네트워크 설계 최적화, 교통 이용자 행동, 인프라 시스템",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0",email:"sboyles@austin.utexas.edu",home:"https://sboyles.github.io/",sch:S("Stephen Boyles traffic assignment network"),metrics:"",papers:[["Transportation Network Analysis, Vol. I: Static and Dynamic Traffic Assignment","교과서 (Boyles·Lownes·Unnikrishnan) — 이론 트랙 표준 교재, 무료 공개 (sboyles.github.io/book.pdf)"]],sig:"unknown",sigText:"",v:1,note:"네트워크 할당 이론을 교과서 수준에서 다루는 드문 랩. TRB Fred Burggraf · Pikarsky · Fambro 수상"},
+
+{name:"Xuesong (Simon) Zhou",inst:"Arizona State University",dept:"School of Sustainable Eng. & Built Environment · ASU Transportation+AI Lab",region:"북미",country:"미국",city:"피닉스 (템피)",addr:"미확인",cat:"교통망 이론",rank:"정교수",yr:"정교수 · 랩 디렉터",rs:3,field:"동적 통행배정, 오픈소스 네트워크 모델링(DTALite·NEXTA·OSM2GMNS), 대규모 최적화",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. MPO·주 DOT 배포 실적이 많아 미국 기관 협업에 국적이 유리",email:"xzhou74@asu.edu",home:"https://github.com/asu-trans-ai-lab/DTALite",sch:"https://scholar.google.com/citations?user=nHfUCoUAAAAJ",metrics:"피인용 11,000+ · h-index 60 · 논문 100편+",papers:[["DTALite: A queue-based mesoscopic traffic simulator for fast model evaluation and calibration","오픈소스 시뮬레이터 — DTALite·NEXTA·OSM2GMNS 합산 10만 다운로드 이상"]],sig:"unknown",sigText:"",v:1,note:"코드·툴 실적을 쌓고 싶다면. MPO·주 DOT 실배포 경험"},
+
+{name:"Yanfeng Ouyang",inst:"UIUC",dept:"Civil & Environmental Eng. · Illinois Center for Transportation",region:"북미",country:"미국",city:"어배너-섐페인 (시카고 220km)",addr:"1209 Newmark Civil Engineering Laboratory, 205 N. Mathews Ave, Urbana, IL 61801",cat:"교통망 이론",rank:"정교수",yr:"George Krambles 석좌교수 (철도) · ICT Associate Director",rs:3,field:"네트워크 설계, 연속체 근사, 신뢰성 기반 시설 입지, 물류·인프라 시스템",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0",email:"yfouyang@illinois.edu",home:"https://yfouyang.cee.illinois.edu/",sch:"https://scholar.google.com/citations?user=gYI8gFsAAAAJ",metrics:"피인용 11,068",papers:[["A continuum approximation approach to reliable facility location design under correlated probabilistic disruptions","2010 · 피인용 283"]],sig:"unknown",sigText:"",v:1,note:"철도 석좌 — 철도 네트워크로 가면 미국 내 최상위"},
+
+{name:"Joseph Chow",inst:"NYU Tandon",dept:"Civil, Urban & Env. Eng. · BUILT@NYU · C2SMART 부소장",region:"북미",country:"미국",city:"뉴욕 (브루클린)",addr:"미확인 (Yabe와 같은 NYU Tandon)",cat:"교통망 이론",rank:"정교수",yr:"정교수 · C2SMART Deputy Director",rs:3,field:"MaaS, 다중수단 네트워크 설계, 행동 도시물류, 유연 교통서비스 운영정책, 교통경제",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. USDOT UTC(C2SMART) 과제라 연방 자금 자리에 국적이 유리",email:"미확인",home:"https://wp.nyu.edu/built/",sch:S("Joseph Chow NYU multimodal network MaaS"),metrics:"",papers:[["Informed Urban Transport Systems","저서 (인용 정보 미검증)"]],sig:"unknown",sigText:"",v:1,note:"Yabe와 같은 NYU Tandon — 한 번에 두 랩 타진 가능"},
+
+{name:"Hong K. Lo",inst:"HKUST",dept:"Civil & Environmental Eng. (학과장) · GREAT Smart Cities Center",region:"아시아·오세아니아",country:"홍콩",city:"홍콩 (Clear Water Bay)",addr:"미확인",cat:"교통망 이론",rank:"석좌교수",yr:"Chair Professor · 학과장 · 센터 디렉터",rs:3,field:"네트워크 신뢰성·강건 설계, 열화 링크 용량 해석, 대중교통 네트워크 설계, 확률적 균형",pd:null,pdText:"중대형 · 미확인",origins:"미확인",korea:"확인 안 됨",fit:"RGC PDF 동반 지원 가능. 국적·언어 이점은 약함",email:"미확인 (홈페이지 참조)",home:"http://cehklo.people.ust.hk/",sch:"https://scholar.google.com/citations?user=x0qEW18AAAAJ",metrics:"피인용 16,092",papers:[["Network with degradable links: Capacity analysis and design","Transportation Research Part B, 2006 (대표작 · 인용 정보 미검증)"]],sig:"unknown",sigText:"",v:1,note:"네트워크 reliability 이론 대표 인물. WCTR Prize(2001) · EASTS Outstanding Paper(2003)"},
+
+{name:"Erik Jenelius",inst:"KTH",dept:"Division of Transport Planning 책임 · Civil & Architectural Eng.",region:"유럽",country:"스웨덴",city:"스톡홀름",addr:"Teknikringen 10, 114 28 Stockholm (호실 미확인)",cat:"교통망 이론",rank:"정교수",yr:"Professor of Public Transport Systems · 2023.06 학과 분과장",rs:3,field:"네트워크 취약성·복원력, 링크 중요도·노출도, 교란 분석, 대중교통 시스템, 마이크로모빌리티",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함. 단 그가 책임자인 분과에 포닥 공고가 열려 있어 접점은 분명",email:"jenelius@kth.se",home:"https://www.kth.se/profile/jenelius?l=en",sch:"https://scholar.google.com/citations?user=L0cuE3EAAAAJ",metrics:"피인용 8,793 · h-index 41",papers:[["Importance and exposure in road network vulnerability analysis","Transportation Research Part A, 2006 — Google Scholar 2018 'Classic Papers in Transportation' 10선"],["The value of new cross-radial links for public transport network resilience","대중교통 네트워크 복원력"]],sig:"unknown",sigText:"본인 명의 공고는 없지만 그가 책임자인 KTH Division of Transport Planning에 포닥 공고가 있음",v:1,note:"네트워크 취약성 이론의 정전. KTH 공고와 같은 분과라 함께 타진"},
+
+{name:"Marc Barthelemy",inst:"CEA / IPhT Paris-Saclay",dept:"Institut de Physique Théorique · CAMS(EHESS) · CSH Vienna 외부교수",region:"유럽",country:"프랑스",city:"파리 (남서 20km, Saclay)",addr:"미확인",cat:"복잡계 네트워크",rank:"연구 디렉터",yr:"Senior Researcher / Research Director",rs:3,field:"도시·교통망의 통계물리, 공간 네트워크 이론, 지하철망의 보편적 구조, 도시과학",pd:null,pdText:"소규모 · 미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함. 물리 저널 트랙으로 완전히 전환하려면 가치가 큰 자리",email:"marc.barthelemy@ipht.fr",home:"https://www.ipht.fr/en/pisp/marc-barthelemy-2/",sch:"https://scholar.google.com/citations?user=2UTIVeIAAAAJ",metrics:"피인용 47,972 — 표 안에서 최다",papers:[["Spatial networks","Physics Reports, 2011 — 공간 네트워크 이론의 표준 리뷰"],["Spatial Networks: A Complete Introduction — From Graph Theory and Statistical Physics to Real-World Applications","Springer, 2022 (저서)"],["The Structure and Dynamics of Cities","Cambridge University Press (저서)"],["Surfacic networks","PNAS Nexus 4(1), 2025"]],sig:"unknown",sigText:"",v:1,urban:1,note:"교통망 이론의 물리학 쪽 정점"},
+
+{name:"Marta C. González",inst:"UC Berkeley",dept:"CEE + City & Regional Planning · LBNL",region:"북미",country:"미국",city:"샌프란시스코 베이 (버클리)",addr:"미확인",cat:"복잡계 네트워크",rank:"정교수",yr:"정교수",rs:3,field:"인간 모빌리티 복잡계, 대규모 통신·카드 데이터, 도시 네트워크 스케일링, OD 추정",pd:null,pdText:"미확인",origins:"미확인 (물리·수학 배경 포닥을 자주 받는 편)",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. LBNL 겸직이라 국립연구소 트랙으로도 이어짐",email:"미확인",home:"https://ced.berkeley.edu/people/marta-gonzalez",sch:"https://scholar.google.com/citations?user=YAGjro8AAAAJ",metrics:"피인용 30,003",papers:[["Understanding individual human mobility patterns","Nature, 2008 (González, Hidalgo, Barabási) · 피인용 8,361"],["Profiling presence patterns and segmenting user locations from cell phone data","인용 정보 미검증"]],sig:"unknown",sigText:"",v:1,urban:1,note:"복잡계 ↔ 교통의 대표 접점. LBNL 겸직 — 국립연구소 경로와 연결"},
+
+{name:"Michael Szell",inst:"IT University of Copenhagen",dept:"NERDS · Networks, Data and Society (공동 설립)",region:"유럽",country:"덴마크",city:"코펜하겐",addr:"Rued Langgaards Vej 7, 2300 Copenhagen S (호실 미확인)",cat:"복잡계 네트워크",rank:"부교수",yr:"부교수",rs:2,field:"자전거 네트워크 성장·기하학적 한계, OSM 데이터 품질, 지오공간 데이터 과학, 마이크로모빌리티, 공유가능성 네트워크",pd:null,pdText:"중형 그룹 · 정확한 수 미확인",origins:"미확인. 주요 공저자: Carlo Ratti(MIT), Barabási(Northeastern), Strogatz(Cornell)",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:"https://nerds.itu.dk/",sch:"https://scholar.google.com/citations?user=3kwJhIcAAAAJ",metrics:"피인용 6,204 · h-index 31 · i10 38",papers:[["The universal visitation law of human mobility","Nature, 2021 · 피인용 602"],["Quantifying the benefits of vehicle pooling with shareability networks","PNAS, 2014 · 피인용 1,070"],["Growing urban bicycle networks","Scientific Reports, 2022"],["Scaling law of urban ride sharing","Scientific Reports, 2017 · 피인용 256"]],sig:"unknown",sigText:"",v:1,urban:1,note:"교통공학 저널 대신 Nature/PNAS 트랙으로 가려면 최적. 전공 전환 수용적"},
+
+{name:"Geoff Boeing",inst:"University of Southern California",dept:"Urban Planning & Spatial Analysis · USC Urban Data Lab 디렉터",region:"북미",country:"미국",city:"로스앤젤레스",addr:"미확인",cat:"복잡계 네트워크",rank:"부교수",yr:"부교수 · 랩 디렉터",rs:2,field:"가로망 위상 분석, OSMnx 개발·유지, 도시 공간 질서·엔트로피, 도시 형태·접근성",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. 김영서 교수와 같은 LA권이라 한 번의 방문으로 둘 다",email:"boeing@usc.edu",home:"https://geoffboeing.com/",sch:"https://scholar.google.com/citations?user=xaKBPQQAAAAJ",metrics:"피인용 8,028",papers:[["Modeling and Analyzing Urban Networks and Amenities with OSMnx","Geographical Analysis 57(4), 567–577, 2025 — OSMnx 공식 레퍼런스"],["Urban spatial order: street network orientation, configuration, and entropy","Applied Network Science, 2019"]],sig:"unknown",sigText:"",v:1,urban:1,note:"오픈소스 실적 + 계획 저널. 네트워크 과학 × 도시계획 교차"},
+
+{name:"Daniel A. Rodríguez",inst:"UC Berkeley",dept:"City & Regional Planning · Berkeley ITS 디렉터",region:"북미",country:"미국",city:"샌프란시스코 베이 (버클리)",addr:"313C Wurster Hall, Berkeley, CA 94720",cat:"대중교통·수요",rank:"정교수",yr:"Chancellor's Professor · ITS 디렉터",rs:3,field:"교통-토지개발-건강·환경 연계, 버스·철도 노선과 건조환경 변화, 저소득층 모빌리티, 접근성",pd:null,pdText:"미확인",origins:"미확인 (보건·경제·공학·지리·정책 연구자와 협업)",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. ITS 디렉터라 기관 단위 포닥 자리에 대한 접근성이 좋음",email:"danrod@berkeley.edu",home:"https://ced.berkeley.edu/people/daniel-rodriguez",sch:"https://scholar.google.com/citations?user=YmyOoaYAAAAJ",metrics:"",papers:[["건조환경·교통·건강 연계 다수 (대표논문 서지 미확인)",""]],sig:"unknown",sigText:"공개 공고 없음. Berkeley ITS 기관 자리와 함께 보면 좋음",v:1,urban:1,note:"교통계획 + 도시계획 + 공중보건. 계획 쪽으로 넓히려면 중심 인물"},
+
+{name:"Brian D. Taylor",inst:"UCLA",dept:"Luskin · Urban Planning & Public Policy · UCLA ITS Research Fellow",region:"북미",country:"미국",city:"로스앤젤레스",addr:"미확인",cat:"대중교통·수요",rank:"정교수",yr:"정교수 · Transportation Finance 프로그램 리드",rs:3,field:"교통재정·재원조달, 대중교통 운임정책, 저이동성 계층 서비스, 여행행동, 교통정치·계획",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. 미국 교통재정·정책은 국내 제도 지식이 중요해 국적자가 구조적으로 유리한 영역",email:"미확인",home:"https://taylor.its.ucla.edu/",sch:"https://scholar.google.com/citations?user=JAJbzF0AAAAJ",metrics:"",papers:[["교통재정·대중교통 정책 계열 다수 (대표논문 서지 미확인)",""]],sig:"unknown",sigText:"공개 공고 없음. UCLA ITS 포닥 펠로 프로그램과 함께 볼 것",v:1,urban:1,note:"김영서 교수와 같은 UCLA — ITS 기관 자리까지 한 번에"},
+
+{name:"UCLA ITS 포닥 펠로 프로그램",inst:"UCLA Institute of Transportation Studies",dept:"기관 단위 프로그램 (개별 PI 아님)",region:"북미",country:"미국",city:"로스앤젤레스",addr:"UCLA ITS, Los Angeles, CA 90095",cat:"대중교통·수요",rank:"—",yr:"기관 프로그램",rs:4,field:"교통정책·계획·모빌리티 전반 (프로그램별 상이)",pd:null,pdText:"포닥 펠로 상시 운영 · 정원 미확인",origins:"—",korea:"—",fit:"미국 국적 → 비자 마찰 0. 김영서·Jiaqi Ma·Brian Taylor가 모두 이 기관 소속이라 한 창구로 복수 접촉 가능",email:"미확인",home:"https://www.its.ucla.edu/people/postdoctoral-fellows/",sch:"",metrics:"",papers:[["",""]],sig:"standing",sigText:"포닥 펠로 페이지 운영 — 기관 단위라 PI 개인 예산에 의존하지 않음",v:1,urban:1,note:"김영서 교수 접촉 시 이 경로도 같이 물어볼 것"},
+
+{name:"UC Davis ITS 포닥",inst:"UC Davis Institute of Transportation Studies",dept:"기관 단위 프로그램 (담당 Zohar Tal)",region:"북미",country:"미국",city:"데이비스 (새크라멘토 25km, SF 110km)",addr:"UC Davis ITS, Davis, CA 95616",cat:"대중교통·수요",rank:"—",yr:"기관 프로그램",rs:4,field:"① 능동교통 안전(보행·자전거) 정량·정성 분석, 능동교통 인프라의 공간·네트워크 모델링, 형평성 ② AV·AI의 통행수요·수단선택 영향, 기술수용 시나리오 ③ 대중교통 재정·거버넌스·이용률·운임정책",pd:null,pdText:"공고 1자리 (마감)",origins:"—",korea:"—",fit:"미국 국적 → 비자 마찰 0. 캘리포니아 교통정책 과제가 많아 제도 지식이 중요한 영역",email:"ztal@ucdavis.edu",home:"https://its.ucdavis.edu/about/postdoctoral-researchers",sch:"",metrics:"",papers:[["",""]],sig:"past",sigText:"포닥 공고 2026.05.21 마감. 기관 단위로 포닥을 상시 운용하므로 다음 사이클 확인 가치",v:1,urban:1,note:"네트워크 모델링을 능동교통 인프라에 적용하는 형태로 번역해 팔 수 있음"},
+
+{name:"LBNL Sustainable Transportation Initiative",inst:"Lawrence Berkeley National Laboratory",dept:"Sustainable Transportation Initiative · Mobility Decision Science",region:"북미",country:"미국",city:"샌프란시스코 베이 (버클리)",addr:"1 Cyclotron Road, Berkeley, CA 94720",cat:"대중교통·수요",rank:"—",yr:"국립연구소",rs:4,field:"통합 토지이용-교통 모델 설계·개발, 모빌리티 빅데이터, 커넥티드·자율, 차량-그리드, 모빌리티 의사결정과학",pd:null,pdText:"포닥 펠로 상시 공모 (개별 공고는 마감)",origins:"—",korea:"—",fit:"미국 국적의 가치가 가장 직접적으로 나타나는 자리. LBNL은 보안 클리어런스가 없어 국적 요건이 느슨하지만 국적자 채용이 행정적으로 간단. 국방계(Sandia·LANL·LLNL)는 사실상 국적자 전용",email:"미확인",home:"https://transportation.lbl.gov/work-us",sch:"",metrics:"",papers:[["",""]],sig:"past",sigText:"통합 토지이용-교통 모델 포닥 공고 이력 (현재 마감). jobs.lbl.gov 주기적 확인 필요",v:1,urban:1,note:"Marta González가 LBNL 겸직 — 그 경로로 접근 가능"},
+
+{name:"Luís M. A. Bettencourt",inst:"University of Chicago",dept:"Mansueto Institute for Urban Innovation · Ecology & Evolution",region:"북미",country:"미국",city:"시카고",addr:"미확인",cat:"복잡계 네트워크",rank:"정교수",yr:"정교수 (2023년 Mansueto 소장직 이임)",rs:3,field:"도시 스케일링 법칙, 도시과학 이론, 비정형 정착지, 도시 복잡계",pd:null,pdText:"기관 단위 포닥 펠로 프로그램 운영 · 정원 미확인",origins:"미확인 (Santa Fe Institute 계보 — 물리·수학 배경 수용적)",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. 기관 공모라 PI 예산에 의존하지 않는 구조",email:"미확인",home:"https://miurban.uchicago.edu/",sch:S("Luis Bettencourt urban scaling"),metrics:"",papers:[["Introduction to Urban Science: Evidence and Theory of Cities as Complex Systems","MIT Press (저서) — 도시과학 이론 교과서"],["도시 스케일링 법칙 계열 다수 (대표논문 서지 미확인)",""]],sig:"standing",sigText:"Mansueto Institute Postdoctoral Fellows 프로그램 운영 — 매년 공모 사이클",v:1,urban:1,note:"교통에서 도시과학 이론으로 넘어가려면 가장 제도화된 입구"},
+
+{name:"Clio Andris",inst:"Georgia Institute of Technology",dept:"City & Regional Planning + Interactive Computing · Friendly Cities Lab",region:"북미",country:"미국",city:"애틀랜타",addr:"미확인",cat:"복잡계 네트워크",rank:"부교수",yr:"부교수 · NSF CAREER (2021)",rs:2,field:"사회 네트워크·사회적 흐름의 수학적 모델, 공간 네트워크, 지오비주얼라이제이션, 도시계획·교통 응용",pd:null,pdText:"미확인",origins:"PI는 MIT 박사(2011, Urban Information Systems · Senseable City Lab) → SMART Singapore 포닥 → Santa Fe Institute 포닥",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0",email:"미확인",home:"https://friendlycities.gatech.edu/",sch:S("Clio Andris spatial social networks"),metrics:"",papers:[["SNoMaN · ROBIN","공간 데이터 탐색용 비주얼 분석 도구 (개발)"],["사회 네트워크 × 공간 흐름 계열 (대표논문 서지 미확인)",""]],sig:"unknown",sigText:"공개 공고 없음. 주의 — Friendly Cities Lab이 '2014–2026 이니셔티브'로 소개돼 있어 현재 운영 상태를 먼저 확인할 것",v:1,urban:1,note:"도시계획과 + 컴퓨팅과 겸직. Peeta와 같은 Georgia Tech"},
+
+{name:"Jan-Dirk Schmöcker",inst:"Kyoto University",dept:"Dept. of Urban Management · School of Global Engineering",region:"아시아·오세아니아",country:"일본",city:"교토 (오사카 40km)",addr:"C1-2-431, Kyoto University",cat:"교통망 이론",rank:"부교수",yr:"부교수 (2010년부터 재직)",rs:2,field:"대중교통 네트워크 할당 이론, 운임구조·혼잡·버스 번칭, 실시간 정보, 크라우드소스 데이터, 도시관광 통행",pd:null,pdText:"미확인",origins:"PI는 독일 출신 — TU Berlin · Newcastle · Imperial College London 박사. 랩이 영어로 운영",korea:"확인 안 됨",fit:"JSPS 호스트 자격 충족(부교수). 랩이 영어로 돌아가서 일본어 없이도 되지만, 일본어가 있으면 교토대 내부 네트워크까지 열림. 네 조건에서 진입장벽이 가장 낮은 일본 랩",email:"schmoecker@trans.kuciv.kyoto-u.ac.jp",home:"https://trans.kuciv.kyoto-u.ac.jp/its/english/index.html",sch:"https://scholar.google.com/citations?user=DIFXh60AAAAJ",metrics:"피인용 5,665",papers:[["A quasi-dynamic capacity constrained frequency-based transit assignment model","Transportation Research Part B, 2008 (대표작 · 인용 정보 미검증)"],["Planning for tourist urban evacuation routes","Environment and Planning B, 2021"]],sig:"unknown",sigText:"",v:1,urban:1,note:"직급 정정 — 부교수(이전 표에서 정교수로 잘못 적었음). JSPS 호스트 자격은 충족"},
+
+{name:"Khandker Nurul Habib",inst:"University of Toronto",dept:"Civil & Mineral Eng. · UTTRI · TDMG 책임",region:"북미",country:"캐나다",city:"토론토",addr:"SF 3001F, University of Toronto",cat:"대중교통·수요",rank:"정교수",yr:"정교수 (테뉴어) · TDMG 리드",rs:3,field:"활동기반 수요모델링, 이산선택·계량경제 모델, 통행조사 방법론, 토지이용-교통 상호작용, 지속가능 교통계획",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"캐나다 — 미국 국적 이점 없음. NSERC PDF 루트 유효",email:"khandker.nurulhabib@utoronto.ca",home:"https://ecf.utoronto.ca/~khandker",sch:"https://scholar.google.com/citations?user=emIcDysAAAAJ",metrics:"피인용 8,649",papers:[["활동기반 수요모델링 · 이산선택 계열 다수 (대표논문 서지 미확인)",""]],sig:"unknown",sigText:"",v:1,urban:1,note:"수요모델링·통행조사 방법론 쪽 중심 인물"},
+
+{name:"Carolina Osorio",inst:"HEC Montréal",dept:"Decision Sciences · Scale AI Chair · Google Research 겸직",region:"북미",country:"캐나다",city:"몬트리올",addr:"미확인",cat:"교통망 이론",rank:"정교수",yr:"정교수 · Scale AI Chair",rs:3,field:"시뮬레이션 기반 네트워크 최적화, 메타모델, 대규모 교통 보정",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"캐나다 — 미국 국적 이점 없음. Google Research 겸직이라 산업계 경로가 함께 열림",email:"미확인",home:"https://www.carolinaosorio.net/",sch:"https://scholar.google.com/citations?user=7-TgO5oAAAAJ",metrics:"피인용 2,820",papers:[["A simulation-based optimization framework for urban transportation problems","Operations Research, 2013"]],sig:"unknown",sigText:"",v:1,note:"MIT → HEC 이동. Lijun Sun과 같은 몬트리올권 — 한 번의 방문으로 둘 다"},
+
+{name:"Elsa Arcaute",inst:"UCL",dept:"CASA · Centre for Advanced Spatial Analysis",region:"유럽",country:"영국",city:"런던",addr:"미확인",cat:"복잡계 네트워크",rank:"정교수",yr:"Professor of Complexity Science",rs:3,field:"도시 복잡계, 도시 스케일링 법칙, 도시 시스템의 계층구조, 도시 경계 정의, 퍼콜레이션·네트워크",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"e.arcaute@ucl.ac.uk",home:"https://www.ucl.ac.uk/bartlett/casa/",sch:"https://scholar.google.com/citations?user=d3-38S4AAAAJ",metrics:"",papers:[["Constructing cities, deconstructing scaling laws","J. Royal Society Interface 12(102), 2015 · 피인용 482"],["Diverse cities or the systematic paradox of urban scaling laws","2017 · 피인용 237"],["Urban scaling laws","Environment and Planning B, 2019 (Rybski, Arcaute, Batty)"]],sig:"unknown",sigText:"",v:1,urban:1,note:"직급 정정 — 정교수(이전 표에서 부교수로 적었음). CASA는 복잡계 + 도시의 상징적 센터"},
+
+{name:"David Levinson",inst:"University of Sydney",dept:"Civil Eng. · TransportLab · Transport Engineering 그룹 리드",region:"아시아·오세아니아",country:"호주",city:"시드니",addr:"미확인",cat:"복잡계 네트워크",rank:"교수",yr:"Professor of Transport",rs:3,field:"접근성 이론, 네트워크 성장·진화, 토지이용-교통 상호작용, 통행시간 예산",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"호주 — 두 강점 거의 작동 안 함. 한국과 시차 1~2시간은 장점",email:"dmlevinson@gmail.com",home:"https://transportist.org/",sch:"https://scholar.google.com/citations?user=UM_E1iQAAAAJ",metrics:"피인용 25,000+",papers:[["Accessibility and the journey to work","Journal of Transport Geography, 1998 · 피인용 776+"],["Measuring the structure of road networks","Geographical Analysis, 2007 (Xie & Levinson)"],["The Transportation Experience","Oxford University Press (저서)"]],sig:"unknown",sigText:"",v:1,urban:1,note:"네트워크 성장 이론의 대표 연구자. 계획·정책 확장성 큼"},
+
+{name:"Oded Cats",inst:"TU Delft",dept:"Transport & Planning (부학과장) · Smart PT Lab 공동 디렉터",region:"유럽",country:"네덜란드",city:"델프트 (로테르담 15km, 암스테르담 60km)",addr:"Stevinweg 1, 2628 CN Delft (호실 미확인)",cat:"대중교통·수요",rank:"정교수",yr:"Professor of Passenger Transport Systems",rs:3,field:"대중교통 네트워크 동역학, 동적 승객 할당·학습·적응, 네트워크 강건성, 장거리 여객교통",pd:null,pdText:"미확인 (학과 전체는 유럽 최대급)",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:"http://smartptlab.tudelft.nl/",sch:"https://scholar.google.com/citations?user=ffzMB8UAAAAJ",metrics:"피인용 17,491 · h-index 49 · i10 65",papers:[["Learning and adaptation in dynamic transit assignment models for congested networks","Transportation Research Record"],["COVID-19 and public transportation: Current assessment, prospects, and research needs","피인용 734"],["Travel satisfaction with public transport: Determinants, user classes, regional disparities","피인용 284"]],sig:"standing",sigText:"장거리 여객교통 시스템 동역학 포닥 공고 확인",v:1,note:"대중교통 네트워크 할당으로 가면 유럽 최상위. BusMezzo 시뮬레이터 계보"},
+
+{name:"Amy Kim",inst:"University of British Columbia",dept:"Civil Eng.",region:"북미",country:"캐나다",city:"밴쿠버",addr:"6250 Applied Science Lane, Vancouver, BC V6T 1Z4 (호실 미확인)",cat:"교통망 이론",rank:"부교수",yr:"부교수",rs:2,field:"자연재해·극한사건에 의한 교통망 교란, 지역 연결성·접근성, 다중수단 네트워크",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"캐나다 — 미국 국적 이점 없음. NSERC PDF 수준 급여를 공고에 명시했던 곳",email:"amykim@civil.ubc.ca",home:G("Amy Kim UBC civil engineering transportation"),sch:S("Amy Kim UBC transportation network resilience"),metrics:"",papers:[["교통망 교란·접근성 계열 (대표논문 서지 미확인)",""]],sig:"past",sigText:"포닥 공고(네트워크 복원력·접근성, 1년 + 1년 연장) — 2025.08.31 마감",v:1,urban:1,note:"네트워크 모델링 + Python/R + GIS 요구. 과제 자금 신호 → 콜드메일 여지"},
+
+{name:"Samitha Samaranayake",inst:"Cornell University",dept:"Civil & Environmental Eng.",region:"북미",country:"미국",city:"이타카 (뉴욕시 350km)",addr:"Hollister Hall, Ithaca, NY 14853 (호실 미확인)",cat:"교통망 이론",rank:"부교수",yr:"부교수",rs:2,field:"대규모 네트워크 알고리즘, 온디맨드·공유 모빌리티, 라스트마일 연계",pd:null,pdText:"미확인",origins:"미확인. 배출 이력: 김영서 → UCLA 조교수",korea:"지도학생이 한국(서울대) 출신 — 한국 박사 수용 전례 있음",fit:"미국 국적 → 비자 마찰 0",email:"미확인",home:G("Samitha Samaranayake Cornell civil engineering"),sch:S("Samitha Samaranayake on-demand ride-sharing network"),metrics:"",papers:[["On-demand high-capacity ride-sharing via dynamic trip-vehicle assignment","PNAS, 2017 (Alonso-Mora, Samaranayake, Wallar, Frazzoli, Rus)"]],sig:"past",sigText:"CEE 교통 시스템 모델링·클라우드 모빌리티 분석 포닥 공고 — 2026.07.10 마감 (최저 연봉 $62,232 명시)",v:1,note:"김영서 교수의 지도교수 — 소개 경로로 활용 가능"},
+
+{name:"Jinhua Zhao",inst:"MIT",dept:"DUSP · JTL / Mobility Initiative",region:"북미",country:"미국",city:"보스턴 (케임브리지)",addr:"77 Massachusetts Ave, Cambridge, MA 02139 (호실 미확인)",cat:"대중교통·수요",rank:"정교수",yr:"정교수",rs:3,field:"대중교통 운영, 여행행동, 도시 AI, 모빌리티 정책",pd:null,pdText:"대형 랩 · 정확한 수 미확인",origins:"미확인 (Singapore-MIT 공동 과제 기반이라 아시아권 연구자 비중 높음)",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0. SMART는 싱가포르 공동과제라 아시아 체류 기회도 있음",email:"미확인",home:"https://mobility.mit.edu/",sch:S("Jinhua Zhao MIT transit behavior"),metrics:"",papers:[["대중교통·여행행동 계열 다수 (대표논문 서지 미확인)",""]],sig:"open",sigText:"SMART M3S 포닥 2건 (Applied AI for Human Capital / AI in Smart Cities) + RA 3자리 이상",v:1,urban:1,note:"레터·네트워크가 목적일 때의 선택"},
+
+{name:"Chalmers PRONTO 과제",inst:"Chalmers University of Technology",dept:"응용수학·제어·데이터과학 (PI 미확인)",region:"유럽",country:"스웨덴",city:"예테보리",addr:"Chalmersplatsen 4, 412 96 Göteborg",cat:"교통망 이론",rank:"—",yr:"PI 미확인",rs:4,field:"공공교통 네트워크의 확률 편미분방정식(SPDE) 모델링",pd:1,pdText:"공고 1자리 (2년)",origins:"—",korea:"—",fit:"유럽 — 공고 기반이라 강점과 무관하게 지원 가능. 수학적 이론 지향이면 표 안에서 가장 잘 맞음",email:"미확인",home:"https://www.chalmers.se/en/",sch:"",metrics:"",papers:[["",""]],sig:"open",sigText:"포닥 2년 공고. 별도로 transport-energy 결합 모델링, 전기트럭 전동화 영향 모델링 포닥도 게시",v:1,note:"응용수학·제어·데이터과학 교차 과제"},
+
+{name:"KTH Transport & Systems Analysis",inst:"KTH Royal Institute of Technology",dept:"Transport & Systems Analysis (분과장 Erik Jenelius)",region:"유럽",country:"스웨덴",city:"스톡홀름",addr:"Teknikringen 10, 114 28 Stockholm",cat:"대중교통·수요",rank:"—",yr:"PI 미확인",rs:4,field:"혼잡통행료, activity-based / agent-based 모델링, 사회후생 이론, 분배 분석",pd:1,pdText:"공고 1자리",origins:"—",korea:"—",fit:"유럽 — 공고 기반. Jenelius가 분과장이라 네트워크 취약성 주제와 연결 가능",email:"미확인",home:"https://www.kth.se/tsa",sch:"",metrics:"",papers:[["",""]],sig:"open",sigText:"Transportation Policy 포닥 공고 (EURAXESS 게시)",v:1,note:"콜드메일 없이 지원 가능"},
+
+{name:"Clemson University",inst:"Clemson University",dept:"PI 미확인",region:"북미",country:"미국",city:"클렘슨 (애틀랜타 210km)",addr:"미확인",cat:"—",rank:"—",yr:"PI 미확인",rs:4,field:"교통 (세부 미확인)",pd:1,pdText:"공고 1자리 + 박사 2~3",origins:"—",korea:"—",fit:"미국 국적 → 비자 마찰 0",email:"미확인",home:"https://bridgingtransport.org/job-board/",sch:"",metrics:"",papers:[["",""]],sig:"open",sigText:"포닥 1명 + funded 박사 2~3명 공고 (BTR Job Board)",v:1,note:"세부 내용 확인 필요"},
+
+{name:"University of Alberta",inst:"University of Alberta",dept:"교통 + 전기공학 (PI 미확인)",region:"북미",country:"캐나다",city:"에드먼턴",addr:"미확인",cat:"—",rank:"—",yr:"PI 미확인",rs:4,field:"교통 + 전기공학 융합",pd:2,pdText:"공고 2자리",origins:"—",korea:"—",fit:"캐나다 — 미국 국적 이점 없음",email:"미확인",home:"https://bridgingtransport.org/job-board/",sch:"",metrics:"",papers:[["",""]],sig:"open",sigText:"포닥 2자리 공고 (BTR Job Board)",v:1,note:""},
+
+{name:"TU Delft — Network Science 교수직",inst:"TU Delft",dept:"Network Science",region:"유럽",country:"네덜란드",city:"델프트 (로테르담 15km)",addr:"Stevinweg 1, 2628 CN Delft",cat:"복잡계 네트워크",rank:"조교수 (공고)",yr:"공고 2026.08 게시",rs:1,field:"네트워크 과학 (이론 트랙)",pd:null,pdText:"해당 없음",origins:"—",korea:"—",fit:"포닥이 아니라 교수직이라 별도 트랙",email:"미확인",home:"https://netscisociety.net/jobs/",sch:"",metrics:"",papers:[["",""]],sig:"open",sigText:"포닥이 아니라 조교수 공고. 네트워크 이론 배경이면 참고용",v:1,note:"Network Science Society 잡보드 게시"},
+
+{name:"Hani Mahmassani",inst:"Northwestern University",dept:"NUTC · Transportation Center",region:"북미",country:"미국",city:"시카고 (에반스턴)",addr:"미확인",cat:"교통망 이론",rank:"정교수 (시니어)",yr:"정교수 · 센터 디렉터",rs:3,field:"동적 통행배정(DTA), 네트워크 동역학, 물류·공급망",pd:null,pdText:"대형 센터 · 미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0",email:"미확인",home:G("Hani Mahmassani Northwestern NUTC"),sch:S("Hani Mahmassani dynamic traffic assignment"),metrics:"",papers:[["Dynamic network traffic assignment and simulation methodology for advanced system management applications","DYNASMART 계보 (인용 정보 미검증)"]],sig:"unknown",sigText:"",v:0,note:"센터 규모가 커서 과제 기반 포닥이 비정기적으로 생김"},
+
+{name:"Srinivas Peeta",inst:"Georgia Institute of Technology",dept:"Civil & Environmental Eng.",region:"북미",country:"미국",city:"애틀랜타",addr:"미확인",cat:"교통망 이론",rank:"정교수",yr:"정교수",rs:3,field:"네트워크 모델링, 정보·커넥티드 시스템, DTA",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0",email:"미확인",home:G("Srinivas Peeta Georgia Tech civil engineering"),sch:S("Srinivas Peeta dynamic traffic assignment"),metrics:"",papers:[["Foundations of dynamic traffic assignment: The past, the present and the future","Networks and Spatial Economics, 2001 (Peeta & Ziliaskopoulos)"]],sig:"unknown",sigText:"",v:0,note:"Purdue → Georgia Tech 이동 이력 — 현 소속 확인 필수"},
+
+{name:"Amanda Stathopoulos",inst:"Northwestern University",dept:"Civil & Environmental Eng.",region:"북미",country:"미국",city:"시카고 (에반스턴)",addr:"미확인",cat:"대중교통·수요",rank:"부교수",yr:"부교수",rs:2,field:"여행행동, 이산선택, 크라우드 물류, 형평성",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"미국 국적 → 비자 마찰 0",email:"미확인",home:G("Amanda Stathopoulos Northwestern travel behavior"),sch:S("Amanda Stathopoulos travel behavior crowdshipping"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:""},
+
+{name:"Marianne Hatzopoulou",inst:"University of Toronto",dept:"Civil & Mineral Eng.",region:"북미",country:"캐나다",city:"토론토",addr:"미확인",cat:"대중교통·수요",rank:"정교수",yr:"정교수",rs:3,field:"교통망 배출·대기질 노출, 모빌리티 환경 형평성",pd:null,pdText:"대형 · 미확인",origins:"미확인",korea:"확인 안 됨",fit:"캐나다 — 미국 국적 이점 없음",email:"미확인",home:G("Marianne Hatzopoulou Toronto civil engineering"),sch:S("Marianne Hatzopoulou transport emissions exposure"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:""},
+
+{name:"Michel Bierlaire",inst:"EPFL",dept:"TRANSP-OR",region:"유럽",country:"스위스",city:"로잔 (제네바 60km)",addr:"미확인",cat:"대중교통·수요",rank:"정교수 (시니어)",yr:"정교수",rs:3,field:"이산선택 모델(Biogeme), 수요 모델링, 최적화",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:"https://transp-or.epfl.ch/",sch:S("Michel Bierlaire discrete choice Biogeme"),metrics:"",papers:[["Biogeme / network GEV 계보 (대표논문 서지 미확인)",""]],sig:"unknown",sigText:"",v:0,note:"Oyama 교수가 과거 재직(2017–19) — 소개 경로가 될 수 있음"},
+
+{name:"Shadi Sharif Azadeh",inst:"TU Delft",dept:"Transport & Planning",region:"유럽",country:"네덜란드",city:"델프트 (로테르담 15km)",addr:"미확인",cat:"교통망 이론",rank:"부교수",yr:"부교수",rs:2,field:"수요 기반 네트워크 최적화, 공유 모빌리티 설계, 수익 관리",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:G("Shadi Sharif Azadeh TU Delft transport planning"),sch:S("Shadi Sharif Azadeh demand based optimization transport"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:"Cats와 같은 학과 — 한 번에 타진 가능"},
+
+{name:"Francesco Corman",inst:"ETH Zürich",dept:"IVT · Transport Systems",region:"유럽",country:"스위스",city:"취리히",addr:"미확인",cat:"교통망 이론",rank:"정교수",yr:"정교수",rs:3,field:"철도 네트워크 운영·스케줄링 최적화, 실시간 재계획",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:"https://traffic.ethz.ch/",sch:S("Francesco Corman railway rescheduling optimization"),metrics:"",papers:[["철도 네트워크 재스케줄링 다수 (대표논문 서지 미확인)",""]],sig:"unknown",sigText:"",v:0,note:"철도 네트워크로 가면 유럽 최상위"},
+
+{name:"Zhenliang Ma",inst:"KTH",dept:"Transport & Systems Analysis",region:"유럽",country:"스웨덴",city:"스톡홀름",addr:"Teknikringen 10, 114 28 Stockholm (호실 미확인)",cat:"대중교통·수요",rank:"부교수",yr:"부교수",rs:2,field:"대중교통 스마트카드 데이터, 네트워크 신뢰성, 수요예측",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:G("Zhenliang Ma KTH transport systems analysis"),sch:S("Zhenliang Ma public transport reliability"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:"KTH 공고와 별개로 개별 타진 가치"},
+
+{name:"Otto Anker Nielsen",inst:"DTU",dept:"Management · Transport Division",region:"유럽",country:"덴마크",city:"코펜하겐 (링비)",addr:"미확인",cat:"교통망 이론",rank:"정교수 (시니어)",yr:"정교수",rs:3,field:"대규모 네트워크 모델, 확률적 통행배정, 대중교통 할당",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:G("Otto Anker Nielsen DTU transport"),sch:S("Otto Anker Nielsen stochastic transit assignment"),metrics:"",papers:[["A stochastic transit assignment model considering differences in passengers utility functions","Transportation Research Part B, 2000"]],sig:"unknown",sigText:"",v:0,note:""},
+
+{name:"Francisco C. Pereira",inst:"DTU",dept:"Management · Transport Division",region:"유럽",country:"덴마크",city:"코펜하겐 (링비)",addr:"미확인",cat:"데이터·ML",rank:"정교수",yr:"정교수",rs:3,field:"ML 기반 수요예측, 불확실성 정량화, 텍스트·센서 융합",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함. MSCA 공동지원에 적극적인 편",email:"미확인",home:G("Francisco Pereira DTU transport machine learning"),sch:S("Francisco Pereira DTU transport demand machine learning"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:""},
+
+{name:"Filipe Rodrigues",inst:"DTU",dept:"Management · Transport Division",region:"유럽",country:"덴마크",city:"코펜하겐 (링비)",addr:"미확인",cat:"데이터·ML",rank:"부교수",yr:"부교수",rs:2,field:"베이지안 딥러닝, 수요예측, 확률적 모델링",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:G("Filipe Rodrigues DTU Bayesian deep learning transport"),sch:S("Filipe Rodrigues Bayesian deep learning transport"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:""},
+
+{name:"Laura Alessandretti",inst:"DTU",dept:"Applied Math & Computer Science",region:"유럽",country:"덴마크",city:"코펜하겐 (링비)",addr:"미확인",cat:"복잡계 네트워크",rank:"부교수",yr:"부교수",rs:2,field:"인간 모빌리티 패턴, 복잡계, 도시 스케일링",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:G("Laura Alessandretti DTU human mobility"),sch:S("Laura Alessandretti scales of human mobility"),metrics:"",papers:[["The scales of human mobility","Nature, 2020 (대표작 · 인용 정보 미검증)"],["Evidence for a conserved quantity in human mobility","Nature Human Behaviour, 2018"]],sig:"unknown",sigText:"",v:0,urban:1,note:"복잡계 순수 트랙. Szell과 같은 코펜하겐권 — 한 번에 둘 다"},
+
+{name:"José J. Ramasco",inst:"IFISC (CSIC-UIB)",dept:"Complex Systems",region:"유럽",country:"스페인",city:"팔마데마요르카",addr:"미확인",cat:"복잡계 네트워크",rank:"연구교수",yr:"Research Professor",rs:3,field:"모빌리티 복잡계, 항공·도시 네트워크, 통행분포 법칙, 대규모 데이터",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함. MSCA 유치 실적이 많은 그룹",email:"미확인",home:"https://ifisc.uib-csic.es/",sch:S("Jose Ramasco mobility networks trip distribution"),metrics:"",papers:[["Systematic comparison of trip distribution laws and models","대표작 (인용 정보 미검증)"]],sig:"unknown",sigText:"",v:0,urban:1,note:""},
+
+{name:"Charisma Choudhury",inst:"University of Leeds",dept:"Institute for Transport Studies",region:"유럽",country:"영국",city:"리즈 (맨체스터 65km)",addr:"미확인",cat:"대중교통·수요",rank:"정교수",yr:"정교수",rs:3,field:"행동 모델링, 이산선택, 개발도상국 교통, 하이브리드 선택모델",pd:null,pdText:"미확인 (ITS Leeds 자체가 국제 구성 비중 높음)",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함. ITS Leeds는 자리 수 자체가 많음",email:"미확인",home:"https://environment.leeds.ac.uk/transport",sch:S("Charisma Choudhury hybrid choice model travel behaviour"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:"교통 전문 연구소 — 포닥 자리 수가 많음"},
+
+{name:"Panagiotis Angeloudis",inst:"Imperial College London",dept:"Civil & Environmental Eng.",region:"유럽",country:"영국",city:"런던",addr:"미확인",cat:"교통망 이론",rank:"부교수",yr:"부교수",rs:2,field:"교통·물류 네트워크 최적화, 항만·공급망, 자율 시스템",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"유럽 — 두 강점 거의 작동 안 함",email:"미확인",home:G("Panagiotis Angeloudis Imperial College transport systems"),sch:S("Angeloudis large subway systems complex networks"),metrics:"",papers:[["Large subway systems as complex networks","Physica A, 2006 (Angeloudis & Fisk)"]],sig:"unknown",sigText:"",v:0,note:"복잡계 네트워크 + 교통 최적화 양쪽에 걸친 드문 이력"},
+
+{name:"Eiji Hato",inst:"University of Tokyo",dept:"Civil Eng. · BinN",region:"아시아·오세아니아",country:"일본",city:"도쿄",addr:"혼고 캠퍼스, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656",cat:"교통망 이론",rank:"정교수",yr:"정교수",rs:3,field:"네트워크 상 행동 모델링, 활동 기반 분석, 도시 설계",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"JSPS 호스트 자격 충족(정교수). 일본어가 랩 내부 운영 언어라 강점이 직접 작동",email:"미확인",home:"https://bin.t.u-tokyo.ac.jp/",sch:S("Eiji Hato behavior in networks travel"),metrics:"",papers:[["BinN 계열 네트워크 행동 모델링 다수 (대표논문 서지 미확인)",""]],sig:"unknown",sigText:"",v:0,urban:1,note:"BinN(Behavior in Networks) 그룹 — Oyama·Iryo와 같은 계보"},
+
+{name:"Daisuke Fukuda",inst:"University of Tokyo",dept:"Civil Eng.",region:"아시아·오세아니아",country:"일본",city:"도쿄",addr:"혼고 캠퍼스, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656",cat:"대중교통·수요",rank:"정교수",yr:"정교수",rs:3,field:"교통 수요 계량분석, 네트워크 균형, 교통경제",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"JSPS 호스트 자격 충족(정교수). 일본어 강점 직접 작동",email:"미확인",home:G("Daisuke Fukuda University of Tokyo civil engineering transport"),sch:S("Daisuke Fukuda transport demand network equilibrium"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:"Tokyo Tech → U Tokyo 이동 이력. Oyama·Iryo와 같은 학과"},
+
+{name:"Qiang Meng",inst:"National University of Singapore",dept:"Civil & Environmental Eng.",region:"아시아·오세아니아",country:"싱가포르",city:"싱가포르",addr:"미확인",cat:"교통망 이론",rank:"정교수",yr:"정교수",rs:3,field:"네트워크 설계 최적화, 해운·항만 물류, 확률적 네트워크",pd:null,pdText:"중대형 · 미확인",origins:"미확인",korea:"확인 안 됨",fit:"싱가포르 — 두 강점 약함. 영어권이고 포닥 급여·연구비가 높은 편",email:"미확인",home:G("Qiang Meng NUS civil environmental engineering"),sch:S("Qiang Meng network design shipping optimization"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:"한국에서 6시간"},
+
+{name:"Michiel Bliemer",inst:"University of Sydney",dept:"Civil Eng. · TransportLab",region:"아시아·오세아니아",country:"호주",city:"시드니",addr:"미확인",cat:"교통망 이론",rank:"교수",yr:"교수",rs:3,field:"동적 통행배정, 네트워크 균형 알고리즘, 준동적 모델",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"호주 — 두 강점 거의 작동 안 함. 시차 1~2시간은 장점",email:"미확인",home:"https://transportlab.sydney.edu.au/",sch:S("Michiel Bliemer quasi-dynamic traffic assignment"),metrics:"",papers:[["Quasi-dynamic traffic assignment with residual point queues","대표작 (인용 정보 미검증)"]],sig:"unknown",sigText:"",v:0,note:"DTA 알고리즘 이론 — Levinson과 같은 랩"},
+
+{name:"Neema Nassir",inst:"University of Melbourne",dept:"Infrastructure Eng.",region:"아시아·오세아니아",country:"호주",city:"멜버른",addr:"미확인",cat:"대중교통·수요",rank:"부교수",yr:"부교수",rs:2,field:"대중교통 네트워크 할당, 스마트카드 데이터, 경로 선택",pd:null,pdText:"미확인",origins:"미확인",korea:"확인 안 됨",fit:"호주 — 두 강점 거의 작동 안 함",email:"미확인",home:G("Neema Nassir University of Melbourne transit assignment"),sch:S("Neema Nassir transit assignment smart card"),metrics:"",papers:[["",""]],sig:"unknown",sigText:"",v:0,note:""}
+];
+
+const CATS=["전체","교통망 이론","복잡계 네트워크","대중교통·수요","데이터·ML"];
+const REGIONS=["전체","북미","유럽","아시아·오세아니아"];
+const SIGS=[["전체","all"],["공개 모집","open"],["상시 · 문의","standing"],["공고 마감","past"],["미확인","unknown"]];
+
+// 도시공학·도시계획과 교통을 함께 다루는 곳: 학과명과 세부분야로 판정 (논문 제목은 "urban" 과다 매칭이라 제외)
+const URBAN=/도시|계획|접근성|토지이용|보행|Urban|Planning|City|CASA|CUSP|DUSP/;
+function isUrban(d){ return d.urban===1 || URBAN.test((d.dept||"")+" "+(d.field||"")); }
+
+let state={cat:"전체",region:"전체",sig:"all",urban:false,marked:false,q:"",sort:"sig",dir:1,openIdx:new Set()};
+
+/* ── 관심 체크: 저장 계층 ────────────────────────────────────────
+   백엔드가 둘이다.
+   · "db"      — claude.ai 아티팩트로 열렸을 때. 문서 하나(shortlist/marks)에
+                 { marks: {키:true} } 로 두며 기기·브라우저가 바뀌어도 유지된다.
+   · "local"   — GitHub Pages 등 정적 호스팅. localStorage 에 같은 모양으로 둔다.
+                 이 브라우저에서만 유지되고 다른 기기와 동기화되지 않는다.
+   페이지는 어느 쪽도 없이 먼저 렌더되고, 저장소가 붙으면 체크박스가 켜진다. */
+let MARKS={}, markRef=null, dbState="loading", canWrite=null, backend="none";
+const LSKEY="postdoc-map.marks.v1";
+let saveDirty=false, saving=false, saveTimer=null;
+
+function markKey(d){
+  let h=0; const s=d.name;
+  for(let i=0;i<s.length;i++){ h=(h*31+s.charCodeAt(i))|0; }
+  const slug=s.replace(/[^0-9A-Za-z]+/g,"_").replace(/^_+|_+$/g,"").toLowerCase().slice(0,40);
+  return (slug||"pi")+"_"+(h>>>0).toString(36);
+}
+
+function flushSave(){
+  if(saving||!saveDirty) return;
+  if(backend==="local"){
+    saveDirty=false;
+    try{ localStorage.setItem(LSKEY,JSON.stringify({marks:MARKS})); }
+    catch(_){ dbState="readonly"; render(); }
+    return;
+  }
+  if(!markRef) return;
+  saving=true; saveDirty=false;
+  markRef.set({marks:MARKS}).catch(e=>{
+    if(e&&(e.code==="invalid_argument"||e.code==="revoked")){ dbState="readonly"; render(); }
+  }).finally(()=>{ saving=false; if(saveDirty) flushSave(); });
+}
+function scheduleSave(){
+  saveDirty=true;
+  if(saveTimer) clearTimeout(saveTimer);
+  saveTimer=setTimeout(flushSave,350);
+}
+
+function toggleMark(d){
+  if(dbState!=="ready") return;
+  const k=markKey(d);
+  // 스냅샷이 준 객체는 freeze되어 있어 직접 수정하면 조용히 무시된다 — 항상 복제본을 만든다.
+  const next=Object.assign({},MARKS);
+  if(next[k]) delete next[k]; else next[k]=true;
+  MARKS=next;
+  scheduleSave();
+  render();
+}
+
+function initLocal(){
+  backend="local";
+  try{
+    const raw=localStorage.getItem(LSKEY);
+    const body=raw?JSON.parse(raw):null;
+    MARKS=(body&&body.marks&&typeof body.marks==="object")?Object.assign({},body.marks):{};
+    dbState="ready";
+  }catch(_){
+    // 시크릿 창이나 사이트 데이터 차단 — 읽기/쓰기 모두 막힌 상태
+    MARKS={}; dbState="unavailable";
+  }
+  render();
+}
+
+async function initDb(){
+  let db=null;
+  try{ db=await window.claude?.use?.("db"); }catch(_){}
+  if(!db){ initLocal(); return; }
+  try{ markRef=db.doc("shortlist/marks"); }
+  catch(_){ initLocal(); return; }
+  backend="db";
+  try{
+    const user=await window.claude?.use?.("user");
+    canWrite=user?await user.can("data.write"):null;
+  }catch(_){ canWrite=null; }
+  let last="";
+  markRef.onSnapshot(snap=>{
+    dbState=(canWrite===false)?"readonly":"ready";
+    // 내 쪽 변경이 아직 저장 중이면 그게 더 최신이다 — 스냅샷으로 덮어쓰지 않는다.
+    if(saving||saveDirty){ paintSaveNote(); return; }
+    const body=snap.exists?(snap.data()||{}):{};
+    const m=(body.marks&&typeof body.marks==="object")?body.marks:{};
+    const sig=JSON.stringify(m);
+    MARKS=Object.assign({},m);   // freeze된 스냅샷을 그대로 들고 있지 않는다
+    if(sig!==last){ last=sig; render(); } else { paintSaveNote(); }
+  },()=>{ initLocal(); });
+}
+
+function paintSaveNote(){
+  const n=document.getElementById("savenote"); if(!n) return;
+  const cnt=Object.keys(MARKS).length;
+  if(dbState==="loading"){ n.innerHTML="관심 체크 불러오는 중…"; return; }
+  if(dbState==="unavailable"){ n.innerHTML="<b>관심 체크를 저장할 수 없는 화면입니다</b> — 시크릿 창이거나 사이트 데이터가 차단된 상태일 수 있습니다."; return; }
+  if(dbState==="readonly"){ n.innerHTML="<b>읽기 전용</b>이라 체크를 저장할 수 없습니다."; return; }
+  const where = backend==="local"
+    ? "이 브라우저에만 저장됩니다 (다른 기기와 동기화되지 않음)"
+    : "기기가 바뀌어도 유지됩니다";
+  n.innerHTML="관심 체크 <b style='color:var(--accent)'>"+cnt+"곳</b> 저장됨 — "+where+".";
+}
+
+function el(t,c,h){const e=document.createElement(t); if(c)e.className=c; if(h!==undefined)e.innerHTML=h; return e;}
+function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+
+function buildChips(){
+  const k=document.getElementById("f-cat");
+  CATS.forEach(v=>{const b=el("button","chip",v); b.type="button"; b.dataset.cat=v;
+    b.onclick=()=>{state.cat=v; render();}; k.appendChild(b);});
+  const r=document.getElementById("f-region");
+  REGIONS.forEach(v=>{const b=el("button","chip",v); b.type="button"; b.dataset.region=v;
+    b.onclick=()=>{state.region=v; render();}; r.appendChild(b);});
+  const s=document.getElementById("f-signal");
+  SIGS.forEach(([l,v])=>{const b=el("button","chip",l); b.type="button"; b.dataset.sig=v;
+    b.onclick=()=>{state.sig=v; render();}; s.appendChild(b);});
+  document.getElementById("f-urban").onclick=()=>{state.urban=!state.urban; render();};
+  document.getElementById("f-mark").onclick=()=>{state.marked=!state.marked; render();};
+}
+
+function stats(){
+  const box=document.getElementById("stats");
+  box.textContent="";
+  const open=DATA.filter(d=>d.sig==="open").length;
+  const mail=DATA.filter(d=>d.email&&d.email!=="미확인"&&!d.email.startsWith("미확인")).length;
+  const net=DATA.filter(d=>d.cat==="교통망 이론").length;
+  const urb=DATA.filter(isUrban).length;
+  const jp=DATA.filter(d=>d.country==="일본").length;
+  const mk=DATA.filter(d=>MARKS[markKey(d)]).length;
+  [[DATA.length,"후보 PI · 기관"],
+   [open,"포닥 공개 모집 확인",true],
+   [mk,"★ 관심 체크",true],
+   [mail,"이메일 확인"],
+   [net,"교통망 이론 전공"],
+   [urb,"도시공학 연계"],
+   [jp,"일본 (JSPS 트랙)"]
+  ].forEach(([n,l,hi])=>{const d=el("div","stat"+(hi?" hi":""));
+    d.appendChild(el("b",null,String(n))); d.appendChild(el("span",null,l)); box.appendChild(d);});
+}
+
+function linkRow(d){
+  const out=[];
+  const isSearch=u=>/google\.com\/search|scholar\.google\.com\/scholar\?/.test(u);
+  if(d.home) out.push('<a class="lnk'+(isSearch(d.home)?" ghost":"")+'" href="'+esc(d.home)+'" target="_blank" rel="noopener">'+(isSearch(d.home)?"홈페이지 검색":"연구실 · 홈페이지")+' &#8599;</a>');
+  if(d.sch)  out.push('<a class="lnk'+(isSearch(d.sch)?" ghost":"")+'" href="'+esc(d.sch)+'" target="_blank" rel="noopener">'+(isSearch(d.sch)?"Scholar 검색":"Google Scholar")+' &#8599;</a>');
+  const m=d.email&&!String(d.email).startsWith("미확인");
+  if(m) out.push('<a class="lnk" href="mailto:'+esc(d.email)+'">메일 쓰기 &#9993;</a>');
+  return out.length?'<div class="links">'+out.join("")+'</div>':"";
+}
+
+function detailHTML(d){
+  let h=linkRow(d);
+  h+='<div class="dgrid">';
+
+  h+='<div class="dblock"><h3>연락 · 위치</h3>';
+  h+='<p class="mail">'+(d.email&&!String(d.email).startsWith("미확인")?esc(d.email):'<span class="na">'+esc(d.email||"미확인")+'</span>')+'</p>';
+  h+='<p class="addr">'+esc(d.country)+' · '+esc(d.city)+'<br>'+esc(d.addr)+'</p></div>';
+
+  h+='<div class="dblock"><h3>세부 분야</h3><p>'+esc(d.field)+'</p></div>';
+
+  const ps=(d.papers||[]).filter(p=>p&&p[0]);
+  h+='<div class="dblock"><h3>대표 논문</h3>';
+  if(ps.length){ps.forEach(p=>{h+='<p class="paper"><span class="pt">'+esc(p[0])+'</span>'+(p[1]?'<span class="pv">'+esc(p[1])+'</span>':'')+'</p>';});}
+  else h+='<p class="na">확인 안 함 — Scholar 링크로 직접 확인</p>';
+  if(d.metrics) h+='<p class="pv" style="margin-top:8px">'+esc(d.metrics)+'</p>';
+  h+='</div>';
+
+  h+='<div class="dblock"><h3>연구실 구성</h3>';
+  h+='<p class="roster">'+esc(d.pdText||"미확인")+'</p>';
+  h+='<p style="margin-top:7px"><span style="color:var(--ink-3)">구성원 이전 소속 · </span>'+esc(d.origins||"미확인")+'</p>';
+  if(d.korea && d.korea!=="—"){
+    const hit=d.korea!=="확인 안 됨";
+    h+='<p style="margin-top:7px"><span style="color:'+(hit?"var(--accent)":"var(--ink-3)")+'">한국 접점 · </span>'+esc(d.korea)+'</p>';
+  }
+  h+='</div>';
+
+  if(d.fit) h+='<div class="dblock"><h3>국적 · 언어 적합도</h3><p class="fitbox">'+esc(d.fit)+'</p></div>';
+  if(d.note) h+='<div class="dblock"><h3>메모</h3><p>'+esc(d.note)+'</p></div>';
+  h+='</div>';
+  return h;
+}
+
+function render(){
+  stats();
+  document.querySelectorAll("#f-cat .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.cat===state.cat)));
+  document.querySelectorAll("#f-region .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.region===state.region)));
+  document.querySelectorAll("#f-signal .chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.sig===state.sig)));
+  document.getElementById("f-urban").setAttribute("aria-pressed",String(state.urban));
+  document.getElementById("f-mark").setAttribute("aria-pressed",String(state.marked));
+  paintSaveNote();
+
+  const q=state.q.trim().toLowerCase();
+  const rows=DATA.map((d,i)=>({d,i})).filter(({d})=>{
+    if(state.marked && !MARKS[markKey(d)]) return false;
+    if(state.urban && !isUrban(d)) return false;
+    if(state.cat!=="전체" && d.cat!==state.cat) return false;
+    if(state.region!=="전체" && d.region!==state.region) return false;
+    if(state.sig!=="all" && d.sig!==state.sig) return false;
+    if(q){
+      const hay=[d.name,d.inst,d.dept,d.country,d.city,d.addr,d.cat,d.field,d.note,d.sigText,d.yr,d.origins,d.korea,d.pdText,d.metrics,d.fit,d.email,
+        (d.papers||[]).map(p=>p.join(" ")).join(" ")].join(" ").toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  const key=state.sort,dir=state.dir;
+  rows.sort((A,B)=>{
+    const a=A.d,b=B.d;
+    if(key==="name"||key==="inst"){
+      const r=String(a[key]).localeCompare(String(b[key]),"ko")*dir;
+      return r!==0?r:a.name.localeCompare(b.name,"ko");
+    }
+    let x,y;
+    if(key==="sig"){x=SIGORDER[a.sig]; y=SIGORDER[b.sig];}
+    else if(key==="cat"){x=CATORDER[a.cat]==null?9:CATORDER[a.cat]; y=CATORDER[b.cat]==null?9:CATORDER[b.cat];}
+    else if(key==="rank"){x=a.rs; y=b.rs;}
+    else {x=(a.pd==null?-1:a.pd); y=(b.pd==null?-1:b.pd); return (y-x)*dir || a.name.localeCompare(b.name,"ko");}
+    if(x===y) return a.name.localeCompare(b.name,"ko");
+    return (x-y)*dir;
+  });
+
+  const host=document.getElementById("rows");
+  host.textContent="";
+  if(!rows.length){
+    host.appendChild(el("div","empty",state.marked?"아직 체크한 곳이 없어. 각 행 왼쪽 체크박스를 눌러봐.":"조건에 맞는 PI가 없어. 필터를 풀어봐."));
+    return;
+  }
+
+  rows.forEach(({d,i})=>{
+    const isOpen=state.openIdx.has(i);
+    const k=markKey(d);
+    const isMarked=!!MARKS[k];
+    const rec=el("div","rec"+(isOpen?" open":"")+(isMarked?" marked":""));
+
+    const outer=el("div","outerrow");
+
+    const chkcell=el("div","chkcell");
+    const cb=document.createElement("input");
+    cb.type="checkbox"; cb.className="chk"; cb.checked=isMarked;
+    cb.disabled=(dbState!=="ready");
+    cb.setAttribute("aria-label",d.name+" 관심 표시");
+    cb.title = dbState==="ready" ? "관심 표시"
+      : dbState==="loading" ? "불러오는 중…"
+      : dbState==="readonly" ? "읽기 전용이라 저장할 수 없음"
+      : "이 화면에서는 저장되지 않음";
+    cb.onclick=e=>{ e.stopPropagation(); toggleMark(d); };
+    chkcell.appendChild(cb);
+    outer.appendChild(chkcell);
+
+    const btn=el("button","rhead gridrow"); btn.type="button";
+    btn.setAttribute("aria-expanded",String(isOpen));
+    btn.appendChild(el("span","caret",isOpen?"&#9660;":"&#9654;"));
+
+    const c1=el("div","c c-name");
+    c1.appendChild(el("span","labl","PI"));
+    const i1=el("div");
+    i1.appendChild(el("span","nm",esc(d.name)+(d.v?"":' <span class="vmark">확인필요</span>')));
+    c1.appendChild(i1);
+
+    const c2=el("div","c c-loc");
+    c2.appendChild(el("span","labl","소속"));
+    const i2=el("div");
+    i2.appendChild(el("span","nm",esc(d.inst)));
+    i2.appendChild(el("span","sub2",esc(d.country)+" · "+esc(d.city)+(d.dept?"<br>"+esc(d.dept):"")));
+    c2.appendChild(i2);
+
+    const c3=el("div","c c-cat");
+    c3.appendChild(el("span","labl","분류"));
+    c3.appendChild(el("div",null,'<span class="cat">'+esc(d.cat)+'</span>'
+      +(isUrban(d)?'<span class="cat urb">도시공학 연계</span>':'')));
+
+    const c4=el("div","c c-rank");
+    c4.appendChild(el("span","labl","직급"));
+    c4.appendChild(el("div",null,esc(d.yr||d.rank||"—")));
+
+    const c5=el("div","c c-pd");
+    c5.appendChild(el("span","labl","포닥"));
+    c5.appendChild(el("div",null,d.pd==null?'<span class="na">미확인</span>':esc(d.pd)+"명"));
+
+    const c6=el("div","c c-sig");
+    c6.appendChild(el("span","labl","신호"));
+    const i6=el("div");
+    i6.appendChild(el("span","tag "+d.sig,SIGLABEL[d.sig]));
+    if(d.sigText) i6.appendChild(el("span","sigtext",esc(d.sigText)));
+    c6.appendChild(i6);
+
+    [c1,c2,c3,c4,c5,c6].forEach(c=>btn.appendChild(c));
+    btn.onclick=()=>{if(state.openIdx.has(i)) state.openIdx.delete(i); else state.openIdx.add(i); render();};
+    outer.appendChild(btn);
+    rec.appendChild(outer);
+    if(isOpen) rec.appendChild(el("div","detail",detailHTML(d)));
+    host.appendChild(rec);
+  });
+}
+
+document.getElementById("thead").addEventListener("click",e=>{
+  const c=e.target.closest("[data-sort]"); if(!c) return;
+  const k=c.dataset.sort;
+  if(state.sort===k) state.dir*=-1; else {state.sort=k; state.dir=1;}
+  render();
+});
+document.getElementById("q").addEventListener("input",e=>{state.q=e.target.value; render();});
+
+/* ── 테마 선택 ──────────────────────────────────────────────────
+   "system" 은 data-theme 를 지워 환경 설정(앱 테마 / OS 설정)을 그대로 따른다.
+   라이트·다크를 고르면 그 선택이 환경보다 우선하고 이 브라우저에 기억된다. */
+const THEMEKEY="postdoc-map.theme";
+function currentTheme(){
+  try{ const m=localStorage.getItem(THEMEKEY); if(m==="light"||m==="dark") return m; }catch(_){}
+  return "system";
+}
+function applyTheme(mode){
+  const r=document.documentElement;
+  if(mode==="light"||mode==="dark") r.setAttribute("data-theme",mode);
+  else r.removeAttribute("data-theme");
+  try{ if(mode==="system") localStorage.removeItem(THEMEKEY); else localStorage.setItem(THEMEKEY,mode); }catch(_){}
+  paintTheme();
+}
+function paintTheme(){
+  const cur=currentTheme();
+  document.querySelectorAll("[data-theme-set]").forEach(b=>
+    b.setAttribute("aria-pressed",String(b.dataset.themeSet===cur)));
+}
+document.querySelectorAll("[data-theme-set]").forEach(b=>{
+  b.onclick=()=>applyTheme(b.dataset.themeSet);
+});
+paintTheme();
+
+buildChips(); render();
+initDb();
+</script>
+
+</body>
+</html>
